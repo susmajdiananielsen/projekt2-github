@@ -4,129 +4,377 @@
 }
 
 /*Generel styling*/
-
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f7f5f2;
+body {
+    background-color: #fff8e9;
+    color: #185735;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6; /* Giver mere luft mellem tekstlinjerne. */
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding-bottom: 1rem;
+.sidehoved {
+    max-width: 70rem;
+    margin: 0 auto; /* Centrerer sidens top på en bred skærm. */
+    padding: 1rem;
 }
 
-h1{
-    font-size: 35px;
+.logo {
+    color: #185735;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-p, a{
-    font-size: 1rem;
-    line-height:1.4;
+.hovedmenu ul {
+    /* Flexbox placerer listens li-elementer på en række. */
+    display: flex;
+
+    /* Linkene kan hoppe ned på næste linje, hvis pladsen bliver trang. */
+    flex-wrap: wrap;
+
+    /* Fordeler den ledige plads mellem linkene. */
+    justify-content: space-between;
+
+    /* Giver afstand mellem både links og eventuelle ekstra rækker. */
+    gap: 0.75rem 1.5rem;
+
+    list-style: none; /* Fjerner listens synlige punkttegn. */
+    padding: 0.75rem 0;
+    margin: 0;
+    border-block: 1px solid #185735;
 }
 
-p{
-    padding-bottom: 0.5rem; /*Der laves mellemrum mellem paragrafferne*/
+.hovedmenu a {
+    color: #185735;
 }
 
-img{
+.menu-knap {
+    display: none; /* På brede skærme vises linkene direkte. */
+    padding: 0.6rem 1rem;
+    font: inherit;
+}
+
+.menu-knap:focus-visible {
+    outline: 3px solid #185735;
+    outline-offset: 4px;
+}
+
+/* Når menuen er lukket, skjules krydset og teksten "Luk menu". */
+.menu-knap .menu-luk {
+    display: none;
+}
+
+/* Når menuen er åben, skjules burgerikonet og teksten "Menu". */
+.menu-knap[aria-expanded="true"] .menu-aabn {
+    display: none;
+}
+
+/* Den samme åbne tilstand viser krydset og teksten "Luk menu". */
+.menu-knap[aria-expanded="true"] .menu-luk {
+    display: inline;
+}
+
+
+.sidehoved a:focus-visible {
+    /* Gør det tydeligt, hvilket link der har fokus, når du bruger Tab. */
+    outline: 3px solid #185735;
+    outline-offset: 4px;
+}
+.topraekke {
+   /* .topraekke er parent til .logo-omraade og .soegning.
+   Hver af dem er et direkte child af .topraekke.
+   Flexbox placerer dem ved siden af hinanden, når der er plads. */
+    display: flex;
+    flex-wrap: wrap; /* Søgefeltet rykker ned, når rækken bliver for smal. */
+    justify-content: space-between; /* Skubber de to blokke fra hinanden. */
+    align-items: center; /* Centrerer dem i højden, når de står på samme række. */
+    gap: 1rem;
+    margin-bottom: 1.5rem; /* Luft mellem toprækken og menuen. */
+}
+
+.soegning {
+    /* Formularen må gerne blive smallere end 16rem på mobilen. */
+    width: 16rem;
     max-width: 100%;
 }
 
-.blog-1 a, .blog-2 a{
-    border: 2px solid white;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    color: white;
-    display: inline-block; /*Vi tilføjer inline-block til vores a-tag så den opfører sig som en blok og ikke overlapper teksten*/
-    margin-top: 1rem;
+.soegning label {
+    display: block;
+    margin-bottom: 0.25rem;
 }
 
-/*Hovedindholdet*/
-
-.flexbox{
-    margin: 2rem;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /*Der oprettes 6 kolonner af størrelsen 1 fraction*/
-    grid-template-rows: repeat(4, 1fr); /*Der oprettes 4 rækker af størrelsen 1 fraction*/
-}
-
-.intro-tekst{
-    background-color: #0e7dcd;
-    grid-column: 1/7;
-    grid-row: 1/3;
-    padding: 2rem;
-}
-
-.blog-1, .blog-2{
-    padding: 2rem;
-}
-
-.blog-1{
-    grid-column: 1/7;
-    grid-row: 3/4;
-    background-color: #b11352;
-}
-
-.blog-2{
-    grid-column: 1/7;
-    grid-row: 4/5;
-    background-color: #7318ea;
-}
-
-/*Footer*/
-
-footer{
-    padding: 2rem;
+.soegefelt {
+    /* En separat Flexbox-række til selve feltet og knappen. */
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-footer section:nth-of-type(1){
+.soegefelt input {
+    flex: 1; /* Feltet tager den plads, knappen ikke bruger. */
+    min-width: 0; /* Lader feltet krympe, hvis pladsen er trang. */
+    padding: 0.5rem;
+    font: inherit;
+}
+
+.soegefelt button {
+    padding: 0.5rem 0.75rem;
+    font: inherit;
+}
+
+.logo {
+    /* Linket får en bredde og kan krympe på en smal skærm. */
+    display: inline-block;
+    width: 18rem;
+    max-width: 100%;
+}
+
+.logo img {
+    /* Billedet er et child af linket og følger linkets bredde. */
+    display: block;
+    width: 100%;
+    height: auto; /* Bevarer billedets proportioner. */
+}
+
+main {
+    /* Samme bredde og sideafstand som sidens header. */
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.forside-grid {
+    /* .forside-grid er parent. Article og aside er direkte children. */
+    display: grid;
+    grid-template-columns: 1fr; /* Én kolonne på mobilen. */
+    gap: 2rem; /* Afstand mellem de to children. */
+    margin-top: 1rem; /* Giver luft mellem introteksten og hele Grid-området. */
+}
+
+.forside-grid aside {
+    gap: 1rem
+}
+.forsidebillede {
+    /* Billedet følger bredden af sit article. */
+    display: block;
+    width: 100%;
+    height: auto; /* Bevarer billedets proportioner. */
+    border-radius: 0.25rem;
     margin-bottom: 1rem;
 }
 
+.velkommen {
+    /* Parent til portræt, overskrift og tekst. */
+    display: flex;
+    flex-direction: column; /* Placér de tre children under hinanden. */
+    align-items: flex-start; /* Hold teksten til venstre. */
+    gap: 0.75rem;
+
+    align-self: start; /* Boksen bliver ikke strakt til artiklens højde. */
+    background-color: #dbe8d3;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.portraet {
+    align-self: center; /* Centrer kun billedet i boksen. */
+    width: 8rem;
+    max-width: 100%;
+    aspect-ratio: 1 / 1; /* Billedrammen er lige bred og høj. */
+    object-fit: cover;
+    border-radius: 50%; /* Gør det kvadratiske billede rundt. */
+}
 
 
-/*Desktop version*/
 
-@media screen and (min-width: 769px /*769px i stedet for for 768px for at sikre at de mest gængse tablet størrelser er inkluderet*/){
-    .flexbox{
-        display: flex;
-        gap: 1rem;
+.indlaeg-grid {
+    /* .indlaeg-grid er parent. Hvert article er et direkte child. */
+    display: grid;
+    grid-template-columns: 1fr; /* Én kolonne på smalle skærme. */
+    gap: 2rem;
+    margin-block: 3rem;
+}
+
+.indlaeg-grid img {
+    display: block;
+    width: 100%;      /* Billedet fylder bredden af sit eget kort. */
+    aspect-ratio: 4 / 3;
+    object-fit: cover; /* Fylder billedrammen uden at strække billedet. */
+    border-radius: 0.25rem;
+}
+
+
+.guide-link {
+    /* Lader linket fylde omkring teksten og få luft på alle sider. */
+    display: inline-block;
+    padding: 0.65rem 1.1rem;
+    border-radius: 0.35rem;
+    background-color: #a62d7e;
+    color: white;
+    font-weight: bold;
+}
+
+.guide-link:focus-visible {
+    /* Gør linket tydeligt, når det får fokus med Tab. */
+    outline: 3px solid #185735;
+    outline-offset: 4px;
+}
+
+#potpourri-guide {
+    /* Giver luft over guiden, når et link hopper ned til den. */
+    scroll-margin-top: 1rem;
+}
+
+.gavekort-grid {
+    /* Ét kort pr. række på smalle skærme. */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.gaveideer-grid img {
+    /* Billedet fylder kortets bredde og beskæres til 4:3. */
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.gaveideer-grid h3 {
+    margin-block: 0.5rem 0.25rem;
+}
+
+
+.sidepanel {
+    /* Parent til velkomstboksen og inspirationsmenuen. */
+    display: flex;
+    flex-direction: column; /* De to children står under hinanden. */
+    gap: 1rem;
+    align-self: start; /* Sidepanelet starter øverst i sin Grid-kolonne. */
+}
+
+.inspiration {
+    background-color: #dbe8d3;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.inspiration ul {
+    margin-top: 0.75rem;
+    padding-left: 1.25rem;
+}
+
+.inspiration li + li {
+    margin-top: 0.5rem; /* Luft mellem punkterne. */
+}
+
+.inspiration a {
+    color: #185735;
+}
+
+.inspiration a:focus-visible {
+    outline: 3px solid #185735;
+    outline-offset: 3px;
+}
+
+
+/*Portpourri Guide*/
+.guide-billede {
+    display: block;         /* Fjerner det lille mellemrum under billedet. */
+    width: 100%;            /* Billedet fylder hele bredden af sin parent. */
+    height: auto;           /* Bevarer billedets proportioner. */
+    margin-block: 1.5rem;   /* Giver luft over og under billedet. */
+    border-radius: 0.35rem; /* Giver let afrundede hjørner. */
+}
+
+.guide-info {
+    background-color: #dbe8d3; /* Samme lysegrønne farve som sidepanelet. */
+    padding: 0.65rem 1rem;     /* Luft mellem teksten og boksens kanter. */
+    margin-bottom: 1.5rem;    /* Afstand ned til næste overskrift. */
+    border-radius: 0.35rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.gave-tip {
+    background-color: #dbe8d3;
+    margin-block: 2rem;     /* Luft over og under boksen. */
+    padding: 1rem 1.25rem; /* Luft inde i boksen. */
+    border-radius: 0.5rem;
+    display: flex;      /* Placerer ikonet og tekstblokken ved siden af hinanden. */
+    align-items: center; /* Centrerer ikonet i højden i forhold til tekstblokken. */
+    gap: 1rem;          /* Giver luft mellem ikonet og tekstblokken. */
+}
+
+.gave-tip h2 {
+    margin-bottom: 0.25rem; /* Lille afstand mellem overskrift og tekst. */
+}
+
+.gave-tip-ikon {
+    color: #a62d7e;
+    font-size: 2rem;
+    flex-shrink: 0; /* Bevarer ikonets plads, når teksten går over flere linjer. */
+}
+
+.gave-tip > div {
+    border-left: 2px solid #d95bb5; /* Pink linje langs tekstblokkens venstre kant. */
+    padding-left: 1rem;           /* Luft mellem linjen og teksten. */
+}
+.guide-trin > li + li {
+    margin-top: 0.5rem; /* Giver luft over andet og efterfølgende trin. */
+}
+
+.guide-trin > li::marker {
+    color: #a62d7e; /* Gør selve tallet mørkepink. */
+    font-weight: 700;
+}
+
+.guide-materialer > li::marker {
+    color: #a62d7e; /* Giver materialelistens punkter samme pink farve som trinnene. */
+}
+
+.guide-intro {
+    margin-block: 0.5rem 2rem; /* Luft over introen og ned til knappen. */
+}
+
+.broedkrumme {
+    display: flex;       /* Placerer links og tekst på en række. */
+    flex-wrap: wrap;     /* Tillader linjeskift, hvis pladsen bliver trang. */
+    gap: 0.25rem 0.5rem; /* Afstand mellem rækker og mellem elementer. */
+    
+    font-size: 0.875rem;
+}
+
+.broedkrumme a {
+    color: inherit; /* Bruger samme grønne farve som den øvrige tekst. */
+    margin-bottom: 1rem; /* Giver luft ned til sidens titel. */
+}
+
+/* Media queries til menuen på smalle skærme og grid-layoutet på brede skærme. */
+
+@media (width < 48rem) {
+    /* JavaScript fjerner hidden, når knappen er klar til brug. */
+    .menu-knap:not([hidden]) {
+        display: inline-block;
     }
 
-    .flexbox div{
-        width: 60%;
+    /* + vælger ul lige efter knappen. Listen skjules, når menuen er lukket. */
+    .menu-knap:not([hidden])[aria-expanded="false"] + ul {
+        display: none;
+    }
+}
+
+/* Fra 48rem (768 pixel) vises indholdet i flere kolonner. */
+@media (min-width: 48rem) {
+    .forside-grid {
+        /* Bred kolonne til indlægget og smal kolonne til sidepanelet. */
+        grid-template-columns: 2fr 1fr;
     }
 
-    .flexbox img{
-        width:40%;
+    .indlaeg-grid {
+        /* To lige brede kolonner til potpourri og bodyscrub. */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
-    .intro-tekst{
-        grid-column: 1/4;
-        grid-row: 1/5;
-    }
-
-    .blog-1{
-        grid-column: 4/7;
-        grid-row: 1/3;
-    }
-
-    .blog-2{
-        grid-column: 4/7;
-        grid-row: 3/5;
-    }
-
-    footer{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: start; /*Får sektionerne til at være på linje med hinanden i toppen af footeren.*/
-    }
-
-
+    .gaveideer-grid {
+    /* Tre lige brede kolonner på brede skærme. */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 }

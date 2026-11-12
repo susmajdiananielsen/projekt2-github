@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Potpourri</title>
+    <script src="https://kit.fontawesome.com/dcabfbcc56.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <header class="sidehoved" id="top">
+   
+<!-- Kun logo og søgefelt ligger i denne Flexbox-række. -->
+<div class="topraekke">
+    <div class="logo-omraade">
+        <a class="logo" href="index.html">
+            <img src="img/Logo-transparent-bg.png" alt="Grønne Gaver logo"></a>
+    </div>
+
+    <form class="soegning" role="search">
+        <!-- Label beskriver feltet. For og id skal være ens. -->
+        <label for="soegeord">Søg efter gaveidéer</label>
+
+        <div class="soegefelt">
+            <input type="search" id="soegeord" name="q"
+                   placeholder="Indtast søgeord">
+            <button type="submit" disabled>Søg</button>
+        </div>
+    </form>
+</div>
+
+    <!-- Topmenu start -->
+    <nav class="hovedmenu" aria-label="Hovedmenu">
+    <!-- aria-controls peger på listen. aria-expanded fortæller, om den er åben. -->
+     <button type="button" class="menu-knap" aria-controls="hovedmenu-links" aria-expanded="false" hidden>
+    <!-- Knappen har en tekst til hver tilstand. Ikonerne er pynt. -->
+<span class="menu-aabn">
+    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    Menu
+</span>
+<span class="menu-luk">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    Luk menu
+</span>
+
+</button>
+    <!-- ul er parent og li child -->
+        <ul id="hovedmenu-links">
+        <li><a href="index.html#top">Forside</a></li>
+        <li><a href="index.html#gaveideer">Gaveidéer</a></li>
+</ul>
+    </nav>
+</header>
+<main>
+  
+        <!-- Viser, hvor læseren er, og linker tilbage til forsiden og gaveidéerne. -->
+            <nav class="broedkrumme" aria-label="Brødkrummesti">
+                <a href="index.html">Forside</a>
+                <span aria-hidden="true">›</span>
+                <a href="index.html#gaveideer">Gaveidéer</a>
+                <span aria-hidden="true">›</span>
+                <span aria-current="page">Potpourri</span>
+            </nav>
+
+        <!-- Her starter potpourriguiden. -->
+    <section id="potpourri-guide">  
+        <h1>Lav din egen potpourri</h1>
+        <!-- Kort intro mellem sidens titel og guidelinket. -->
+
+       <p class="guide-intro">
+        En duftende gave af blomster og citrusskaller. Giv tørrede blomster og citrusskaller nyt liv i et genbrugsglas. Pynt med snor eller bånd, og tilføj en personlig hilsen.
+        </p>
+
+        <!-- Hopper til fremgangsmåden længere nede på samme side. -->
+        <a class="guide-link" href="#fremgangsmaade">Gå til guiden ↓</a>
+
+        <!-- Guidens store billede. -->
+        <img class="guide-billede" src="img/potpourri.png" alt="Glas med tørrede rosenblade, lavendel og appelsinskiver">
+
+
+        
+        <!-- Kort praktisk info før selve guiden. -->
+        <p class="guide-info">Arbejdstid: ca. 10 min. · Brug helt tørre materialer</p>
+    </section>
+
+
+<section>
+    <h2 id="fremgangsmaade">Sådan laver du potpourri</h2>
+
+    <h3>Det skal du bruge</h3>
+    <ul class="guide-materialer">
+        <li>Tørrede rosenblade og lavendel</li>
+        <li>Helt tørre citrusskaller</li>
+        <li>Et rent, tørt genbrugsglas</li>
+        <li>Snor, bånd eller et lille kort</li>
+    </ul>
+
+    <h3>Sådan gør du</h3>
+    
+    <!-- En nummereret liste viser, at trinnene har en rækkefølge. -->
+    <ol class="guide-trin">
+        <li>Sørg for, at blomster og citrusskaller er helt tørre.</li>
+        <li>Bland dem forsigtigt, og kom dem i glasset.</li>
+        <li>Pynt glasset, og tilføj en personlig hilsen.</li>
+    </ol>
+</section>
+
+<!-- Gavetip efter fremgangsmåden. -->
+<section class="gave-tip">
+    <!-- Ikonet er pynt. Overskriften fortæller, hvad boksen handler om. -->
+    <i class="fa-solid fa-gift gave-tip-ikon" aria-hidden="true"></i>
+
+    <div>
+        <h2>Gør gaven personlig</h2>
+        <p>Pynt glasset med en stofrest eller et bånd, og skriv en lille hilsen på et kort af brugt papir.</p>
+    </div>
+</section>
+
+
+<!-- HER STARTER FLERE GRØNNE GAVEIDÉER -->
+<section id="gaveideer">
+    <h2>Flere grønne gaveidéer</h2>
+
+    <!-- .gaveideer-grid er parent. Hvert article er et direkte child. -->
+    <div class="gaveideer-grid">
+        <article>
+            <img src="img/krydderurtesalt.png"
+                 alt="Glas med krydderurtesalt pyntet med bånd">
+            <h3>Krydderurtesalt</h3>
+            <p>Bland salt med tørrede krydderurter, og giv det i et lille genbrugsglas.</p>
+        </article>
+
+        <article>
+            <img src="img/appelsin-vanilje-likor.png"
+                 alt="Et glas orange med friske appelsiner ved siden af">
+            <h3>Appelsin-vanilje-likør</h3>
+            <p>Brug appelsiner og vodkaen fra barskabet til en hjemmelavet gave.</p>
+        </article>
+
+        <article>
+            <img src="img/blomsterfro-gavepapir.png"
+                 alt="Foldede frøposer af brugt papir med små blomster på">
+            <h3>Frø fra haven</h3>
+            <p>Fold små poser af brugt papir, og giv frø fra dine yndlingsblomster videre.</p>
+        </article>
+    </div>
+</section>
+
+
+    </main>
+</body>
+</html>

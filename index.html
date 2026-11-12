@@ -1,83 +1,144 @@
 <!doctype html>
 <html lang="da">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Web Design | Repitition</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-<!--Navigation-->
-    <div class="container">
-        <header>
-             <nav>
-                <ul>
-                    <li><a href="#">Om</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Kontakt</a></li>
-              </ul>
-            </nav>
-        </header>
-       
-    <!-- Hovedindhold -->
-  <body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grønne Gaver</title>
+    <script src="https://kit.fontawesome.com/dcabfbcc56.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <header class="sidehoved" id="top">
+    <!-- Kun logo og søgefelt ligger i denne Flexbox-række. -->
+<div class="topraekke">
+    <div class="logo-omraade">
+        <a class="logo" href="index.html">
+            <img src="img/Logo-transparent-bg.png" alt="Grønne Gaver logo"></a>
+    </div>
+
+
+ <!-- Label beskriver feltet. For og id skal være ens. -->
+    <form class="soegning" role="search">
+        <label for="soegeord">Søg efter gaveidéer</label>
+        <div class="soegefelt">
+            <input type="search" id="soegeord" name="q"
+                   placeholder="Indtast søgeord">
+            <button type="submit" disabled>Søg</button>
+        </div>
+    </form>
+</div>
+
+    <!-- Topmenu start -->
+    <nav class="hovedmenu" aria-label="Hovedmenu">
+    <!-- aria-controls peger på listen. aria-expanded fortæller, om den er åben. -->
+     <button type="button" class="menu-knap" aria-controls="hovedmenu-links" aria-expanded="false" hidden>
+    <!-- Knappen har en tekst til hver tilstand. Ikonerne er pynt. -->
+<span class="menu-aabn">
+    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    Menu
+</span>
+<span class="menu-luk">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    Luk menu
+</span>
+
+</button>
+    <nav>
+        <ul id="hovedmenu-links">
+            <li><a href="index.html#top">Forside</a></li>
+            <li><a href="index.html#gaveideer">Gaveidéer</a></li>
+        </ul>
+    </nav>
+</header>
+
     <main>
-      <!--Intro til virksomhed-->
-      <section class="flexbox">
-        <div>
-          <h1>God overskrift</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            laboriosam inventore pariatur, animi sapiente qui labore deleniti
-            neque. Architecto nihil error quisquam doloribus, nemo perferendis
-            ex cum neque maiores veniam.
-          </p>
-        </div>
-        <img src="img/billede.jpg" alt="" />
-      </section>
+        <h1>Små gaver med grøn omtanke</h1>
+        <p>Idéer til personlige gaver med planter, naturmaterialer
+            og ting, du allerede har.</p>
 
-      <!--Nyhedsartikler-->
-      <section class="grid">
-        <div class="intro-tekst">
-          <h2>Overskrift</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, eos?
-            Labore saepe commodi soluta? Atque eligendi, perferendis deleniti
-            accusamus aperiam iure soluta. Exercitationem, error. Tempora cum
-            asperiores inventore deleniti reiciendis!
-          </p>
-        </div>
+<!-- Parent til de to kolonner på forsiden. -->
+<div class="forside-grid">
+    <!-- Første child: Det fremhævede indlæg. -->
+    <article>
+        <img class="forsidebillede"src="img/rosenbadesalt.png" alt="Et glas med badesalt og tørrede rosenblade">
+        <h2>Badesalt med rosenblade</h2>
+        <p>Forvandl salt og tørrede rosenblade til en lille
+            hjemmelavet gave til et fodbad.</p>
+    </article>
 
-        <div class="blog-1">
-          <h3>Nyhed</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quis
-            natus excepturi veniam eligendi repellat.
-          </p>
-          <a href="#">Link til side</a>
-        </div>
+<!-- Sidepanelet er et direkte child af .forside-grid. -->
+<aside class="sidepanel">
+    <section class="velkommen">
+        <img class="portraet" src="img/Sus-profilbillede-tegnet.png" alt="Profilbillede af Sus-Maj">
 
-        <div class="blog-2">
-          <h3>Nyhed 2</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-            quidem.
-          </p>
-          <a href="#">Link til anden side</a>
-        </div>
-      </section>
+        <h2>Velkommen hos mig</h2>
+        <p>Jeg hedder Sus-Maj. Her deler jeg idéer til hjemmelavede
+            gaver med ting, du allerede har.</p>
+    </section>
+
+    <!-- Find inspiration links -->
+    <nav class="inspiration" aria-labelledby="inspiration-titel">
+        <h2 id="inspiration-titel">Find inspiration</h2>
+
+        <ul>
+            <li><a href="#gaveideer">Se flere gaveidéer</a></li>
+            <li><a href="potpourri.html"> Gå til potpourriguiden</a></li>
+        </ul>
+    </nav>
+</aside>
+</div>
+
+<!-- .indlaeg-grid er parent. Hvert article er et direkte child. -->
+<div class="indlaeg-grid">
+    <article>
+        <img src="img/potpourri.png"
+             alt="Glas med tørrede rosenblade, lavendel og appelsinskiver">
+        <h2>Lav din egen potpourri</h2>
+        <p>Giv tørrede blomster og citrusskaller nyt liv som en duftende
+            gave i et genbrugsglas.</p>
+            <!-- Linket hopper til det element, der har id="potpourri-guide". -->
+            <a class="guide-link" href="potpourri.html">Se hvordan du gør</a>
+    </article>
+
+    <article>
+        <img src="img/maelkeboette-scrub.png"
+             alt="Et lille glas med bodyscrub og gule mælkebøtter ved siden af">
+        <h2>Bodyscrub med mælkebøtte</h2>
+        <p>Kom din hjemmelavede scrub i et rent genbrugsglas,
+            og pynt med et bånd og en personlig hilsen.</p>
+    </article>
+</div>
+
+<!-- HER STARTER FLERE GRØNNE GAVEIDÉER -->
+<section id="gaveideer">
+    <h2>Flere grønne gaveidéer</h2>
+
+    <!-- .gaveideer-grid er parent. Hvert article er et direkte child. -->
+    <div class="gaveideer-grid">
+        <article>
+            <img src="img/krydderurtesalt.png"
+                 alt="Glas med krydderurtesalt pyntet med bånd">
+            <h3>Krydderurtesalt</h3>
+            <p>Bland salt med tørrede krydderurter, og giv det i et lille genbrugsglas.</p>
+        </article>
+
+        <article>
+            <img src="img/appelsin-vanilje-likor.png"
+                 alt="Et glas orange med friske appelsiner ved siden af">
+            <h3>Appelsin-vanilje-likør</h3>
+            <p>Brug appelsiner og vodkaen fra barskabet til en hjemmelavet gave.</p>
+        </article>
+
+        <article>
+            <img src="img/blomsterfro-gavepapir.png"
+                 alt="Foldede frøposer af brugt papir med små blomster på">
+            <h3>Frø fra haven</h3>
+            <p>Fold små poser af brugt papir, og giv frø fra dine yndlingsblomster videre.</p>
+        </article>
+    </div>
+</section>
     </main>
-    <footer>
-      <section>
-        <h4>Kontaktinformation</h4>
-        <p>Adresse: Havneparken 1</p>
-        <p>E-mail: <a href="mailto:nera@iba.dk">Skriv til os</a></p>
-        <p>Telefonnummer: <a href="tel:22334455">Ring til os</a></p>
-      </section>
-      <section>
-        <h4>Sociale medier</h4>
-        <a href="#">Facebook</a>
-        <a href="#">LinkedIn</a>
-      </section>
-    </footer>
-  </body>
+</body>
 </html>
