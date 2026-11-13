@@ -10,6 +10,7 @@
     <script src="js/menu.js" defer></script>
 </head>
 <body>
+    <a class="spring-link" href="#hovedindhold">Spring til indhold</a>
     <header class="sidehoved" id="top">
     <!-- Kun logo og søgefelt ligger i denne Flexbox-række. -->
 <div class="topraekke">
@@ -30,64 +31,65 @@
     </form>
 </div>
 
-    <!-- Topmenu start -->
-    <nav class="hovedmenu" aria-label="Hovedmenu">
-    <!-- aria-controls peger på listen. aria-expanded fortæller, om den er åben. -->
-     <button type="button" class="menu-knap" aria-controls="hovedmenu-links" aria-expanded="false" hidden>
-    <!-- Knappen har en tekst til hver tilstand. Ikonerne er pynt. -->
-<span class="menu-aabn">
-    <i class="fa-solid fa-bars" aria-hidden="true"></i>
-    Menu
-</span>
-<span class="menu-luk">
-    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-    Luk menu
-</span>
+<!-- Topmenu start -->
+<nav class="hovedmenu" aria-label="Hovedmenu">
+            <!-- aria-controls peger på listen. aria-expanded fortæller, om den er åben. -->
+            <button type="button" class="menu-knap" aria-controls="hovedmenu-links" aria-expanded="false" hidden>
+            <!-- Knappen har en tekst til hver tilstand. Ikonerne er pynt. -->
+        <span class="menu-aabn">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            Menu
+        </span>
+        <span class="menu-luk">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            Luk menu
+        </span>
 
-</button>
-    <nav>
-        <ul id="hovedmenu-links">
-            <li><a href="index.html#top">Forside</a></li>
-            <li><a href="index.html#gaveideer">Gaveidéer</a></li>
-        </ul>
-    </nav>
-</header>
+        </button>
 
-    <main>
-        <h1>Små gaver med grøn omtanke</h1>
-        <p>Idéer til personlige gaver med planter, naturmaterialer
-            og ting, du allerede har.</p>
+                <ul id="hovedmenu-links">
+                    <li><a href="index.html#top" aria-current="page">Forside</a></li>
+                    <li><a href="index.html#gaveideer">Gaveidéer</a></li>
+                </ul>
+            </nav>
+        </header>
 
-<!-- Parent til de to kolonner på forsiden. -->
-<div class="forside-grid">
-    <!-- Første child: Det fremhævede indlæg. -->
-    <article>
-        <img class="forsidebillede"src="img/rosenbadesalt.png" alt="Et glas med badesalt og tørrede rosenblade">
-        <h2>Badesalt med rosenblade</h2>
-        <p>Forvandl salt og tørrede rosenblade til en lille
-            hjemmelavet gave til et fodbad.</p>
-    </article>
+            <main id="hovedindhold" tabindex="-1">
+                <h1>Små gaver med grøn omtanke</h1>
+                <p>Idéer til personlige gaver med planter, naturmaterialer
+                    og ting, du allerede har.</p>
 
-<!-- Sidepanelet er et direkte child af .forside-grid. -->
-<aside class="sidepanel">
-    <section class="velkommen">
-        <img class="portraet" src="img/fotorealistisk-sus.jpg" alt="Profilbillede af Sus-Maj">
+        <!-- Parent til de to kolonner på forsiden. -->
+        <div class="forside-grid">
+            <!-- Første child: Det fremhævede indlæg. -->
+            <article>
+                <img class="forsidebillede"src="img/rosenbadesalt.png" alt="Et glas med badesalt og tørrede rosenblade">
+                <h2>Badesalt med rosenblade</h2>
+                <p>Forvandl salt og tørrede rosenblade til en lille
+                    hjemmelavet gave til et fodbad.</p>
+                    <a class="guide-link" href="potpourri.html">Se hvordan du gør</a>
+            </article>
 
-        <h2>Velkommen hos mig</h2>
-        <p>Jeg hedder Sus-Maj. Her deler jeg idéer til hjemmelavede
-            gaver med ting, du allerede har.</p>
-    </section>
+        <!-- Sidepanelet er et direkte child af .forside-grid. -->
+        <aside class="sidepanel">
+            <section class="velkommen">
+                <img class="portraet" src="img/sus-profilbillede-close-up.png" alt="Profilbillede af Sus-Maj">
 
-    <!-- Find inspiration links -->
-    <nav class="inspiration" aria-labelledby="inspiration-titel">
-        <h2 id="inspiration-titel">Find inspiration</h2>
+                <h2>Velkommen hos mig</h2>
+                <p>Jeg hedder Sus-Maj. Her deler jeg idéer til hjemmelavede
+                    gaver med ting, du allerede har.</p>
+            </section>
 
-        <ul>
-            <li><a href="#gaveideer">Se flere gaveidéer</a></li>
-            <li><a href="potpourri.html"> Gå til potpourriguiden</a></li>
-        </ul>
-    </nav>
-</aside>
+            <!-- Find inspiration links -->
+            <nav class="inspiration" aria-labelledby="inspiration-titel">
+                <h2 id="inspiration-titel">Find inspiration</h2>
+
+                <ul>
+                    <li><a href="#gaveideer">Se flere gaveidéer</a></li>
+                    <li><a href="potpourri.html"> Gå til potpourriguiden</a></li>
+                </ul>
+            </nav>
+        </aside>
 </div>
 
 <!-- .indlaeg-grid er parent. Hvert article er et direkte child. -->
@@ -112,33 +114,53 @@
 </div>
 
 <!-- HER STARTER FLERE GRØNNE GAVEIDÉER -->
-<section id="gaveideer">
-    <h2>Flere grønne gaveidéer</h2>
 
-    <!-- .gaveideer-grid er parent. Hvert article er et direkte child. -->
+<!-- Sektionen kan få fokus via et link og springes over ved almindeligt Tab. -->
+
+<!-- .gaveideer-grid er parent. Hvert article er et direkte child. -->
+<section id="gaveideer" tabindex="-1">
+    <h2>Flere Grønne Gaveidéer</h2>
+
     <div class="gaveideer-grid">
         <article>
             <img src="img/krydderurtesalt.png"
-                 alt="Glas med krydderurtesalt pyntet med bånd">
+                 alt="Glas med krydderurtesalt pyntet med snor og et gavemærke">
             <h3>Krydderurtesalt</h3>
-            <p>Bland salt med tørrede krydderurter, og giv det i et lille genbrugsglas.</p>
+            <p>Lav dit eget krydderurtesalt med urter fra haven eller altanen.
+                En nem og personlig gave, der giver smag i hverdagen.</p>
+            <a class="gavekort-link" href="krydderurtesalt.html" aria-label="Læs guiden til krydderurtesalt">
+                <span class="gavekort-link-tekst">Læs guiden</span>
+                <span aria-hidden="true">→</span>
+            </a>
         </article>
 
         <article>
-            <img src="img/appelsin-vanilje-likor.png"
-                 alt="Et glas orange med friske appelsiner ved siden af">
-            <h3>Appelsin-vanilje-likør</h3>
-            <p>Brug appelsiner og vodkaen fra barskabet til en hjemmelavet gave.</p>
+            <img src="img/appelsin-vanilje-likor.png" alt="Et glas orange med friske appelsiner og vanilje ved siden af">
+            <h3>Jordbærlikør</h3>
+            <p>Giv havens friske jordbær og vodkaen fra barskabet nyt liv
+                som hjemmelavet jordbærlikør til en, du holder af.</p>
+            <a class="gavekort-link" href="img/appelsin-vanilje-likor.png" aria-label="Læs guiden til appelsin-vanilje-likør">Læs guiden <span aria-hidden="true">→</span>
+            </a>
         </article>
 
         <article>
             <img src="img/blomsterfro-gavepapir.png"
-                 alt="Foldede frøposer af brugt papir med små blomster på">
+                 alt="Foldede frøkuverter af brugt papir med små blomster på">
             <h3>Frø fra haven</h3>
-            <p>Fold små poser af brugt papir, og giv frø fra dine yndlingsblomster videre.</p>
+            <p>Lav fine frøkuverter af brugt papir, og del frø fra dine
+                yndlingsblomster og planter. En lille gave, der spirer videre.</p>
+            <a class="gavekort-link" href="froe-fra-haven.html" aria-label="Læs guiden til frø fra haven">Læs guiden <span aria-hidden="true">→</span>
+            </a>
         </article>
     </div>
 </section>
+
+
     </main>
+        <footer class="footer">
+            <p>Grønne Gaver · Af Sus-Maj Diana Nielsen</p>
+            <a href="#top">Tilbage til toppen</a>
+        </footer>
 </body>
+
 </html>

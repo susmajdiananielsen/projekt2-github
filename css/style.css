@@ -32,24 +32,68 @@ body {
 
     /* Fordeler den ledige plads mellem linkene. */
     justify-content: space-between;
+    /*justify-content: flex-start;*/
 
     /* Giver afstand mellem både links og eventuelle ekstra rækker. */
     gap: 0.75rem 1.5rem;
-
     list-style: none; /* Fjerner listens synlige punkttegn. */
     padding: 0.75rem 0;
-    margin: 0;
+    margin-top: 0.5rem;
     border-block: 1px solid #185735;
+    background-color: #185735;
+    color: #fff;
+    padding-inline: 0.5rem;
+   
 }
 
+
+
+
 .hovedmenu a {
-    color: #185735;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0.25rem;
 }
+
+/* Understreger linket til den side, brugeren er på. */
+.hovedmenu a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+.hovedmenu a:hover,
+.hovedmenu a:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: -5px; /* Trækker fokuskanten ind på linket. */
+}
+
 
 .menu-knap {
     display: none; /* På brede skærme vises linkene direkte. */
     padding: 0.6rem 1rem;
     font: inherit;
+    background-color: #185735;
+    border: 1px solid #185735;
+    color: #fff;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    font: inherit; /* Arver menuens skrifttype, skriftstørrelse og linjehøjde. */
+    font-weight: 600; /* Gør teksten på knappen halvfed. */
+    cursor: pointer;
+}
+
+.menu-knap:hover,
+.menu-knap:focus-visible {
+    background-color: #d95bb5;
+    color: #fff;
+}
+
+.menu-knap:focus-visible {
+    outline: 2px solid #185735;
+    outline-offset: 2px;
 }
 
 .menu-knap:focus-visible {
@@ -159,17 +203,39 @@ main {
     margin-bottom: 1rem;
 }
 
+.spring-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+    transform: translateY(calc(-100% - 1rem));
+    padding: 0.75rem 1rem;
+    background-color: #185735;
+    color: #fff;
+}
+
+/* Viser linket, når det får tastaturfokus. */
+.spring-link:focus {
+    transform: none;
+}
+
 .velkommen {
     /* Parent til portræt, overskrift og tekst. */
     display: flex;
     flex-direction: column; /* Placér de tre children under hinanden. */
     align-items: flex-start; /* Hold teksten til venstre. */
     gap: 0.75rem;
-
+    color:#ffffff;
     align-self: start; /* Boksen bliver ikke strakt til artiklens højde. */
-    background-color: #dbe8d3;
+    background-color: #d95bb5;
     padding: 1.25rem;
     border-radius: 0.5rem;
+    font-weight: 50;
+}
+
+h1.velkommen {
+    font-size: 0.5rem;
+    margin-bottom: 0.25rem; /* Lille afstand mellem overskrift og tekst. */
 }
 
 .portraet {
@@ -203,11 +269,24 @@ main {
 .guide-link {
     /* Lader linket fylde omkring teksten og få luft på alle sider. */
     display: inline-block;
-    padding: 0.65rem 1.1rem;
+    padding: 0.65rem 1.1rem; /* 2 værdier = Top og bund */
     border-radius: 0.35rem;
-    background-color: #a62d7e;
+    background-color: #d95bb5;
     color: white;
     font-weight: bold;
+}
+
+.guide-intro {
+    margin-block: 0.5rem 0; /* Luft over introen. */
+}
+
+/* Giver luft over guidelinks, der står lige efter et tekstafsnit. */
+p + .guide-link {
+    margin-top: 1rem;
+}
+
+.tilbage-link {
+    margin-top: 1rem; /* Luft mellem gaveidéerne og returlinket. */
 }
 
 .guide-link:focus-visible {
@@ -227,6 +306,13 @@ main {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-top: 1rem;
+}
+
+
+#gaveideer .gaveideer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
 .gaveideer-grid img {
@@ -309,7 +395,7 @@ main {
 }
 
 .gave-tip-ikon {
-    color: #a62d7e;
+    color: #d95bb5;
     font-size: 2rem;
     flex-shrink: 0; /* Bevarer ikonets plads, når teksten går over flere linjer. */
 }
@@ -323,17 +409,34 @@ main {
 }
 
 .guide-trin > li::marker {
-    color: #a62d7e; /* Gør selve tallet mørkepink. */
+    color: #d95bb5; /* Gør selve tallet mørkepink. */
     font-weight: 700;
 }
 
 .guide-materialer > li::marker {
-    color: #a62d7e; /* Giver materialelistens punkter samme pink farve som trinnene. */
+    color: #d95bb5; /* Giver materialelistens punkter samme pink farve som trinnene. */
 }
 
-.guide-intro {
-    margin-block: 0.5rem 2rem; /* Luft over introen og ned til knappen. */
+.gave-guide {
+    margin-top: 1rem; /* Luft mellem kortets tekst og vejledningen. */
 }
+
+.gave-guide summary {
+    color: #185735;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gave-guide summary:focus-visible {
+    outline: 2px solid #185735;
+    outline-offset: 3px;
+}
+
+.gave-guide ol {
+    margin-block: 0.75rem;
+    padding-inline-start: 1.5rem;
+}
+
 
 .broedkrumme {
     display: flex;       /* Placerer links og tekst på en række. */
@@ -348,33 +451,122 @@ main {
     margin-bottom: 1rem; /* Giver luft ned til sidens titel. */
 }
 
-/* Media queries til menuen på smalle skærme og grid-layoutet på brede skærme. */
+.footer {
+    margin-top: 2rem;        /* Luft mellem gaveidéerne og sidefoden. */
+    padding: 1.25rem 1rem;   /* Luft omkring teksten inde i sidefoden. */
+    background-color: #185735;
+    color: #fff;
+}
+
+.footer a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: inherit;          /* Bruger sidefodens hvide tekstfarve. */
+    text-decoration: underline;
+}
+
+.footer a:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+/* Viser en tydelig fokuskant inde i menulinket. */
+.hovedmenu a:focus,
+.hovedmenu a:focus-visible {
+    background-color: #fff;
+    color: #185735;
+    outline: 3px solid #185735;
+    outline-offset: -4px;
+}
+
+#gaveideer > h2 {
+    margin-bottom: 1.5rem;
+}
+
+#gaveideer .gaveideer-grid {
+    gap: 2rem;
+}
+
+/* Flexbox placerer linkene på linje nederst i kortene. */
+#gaveideer article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#gaveideer article img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+#gaveideer article h3 {
+    color: #185735;
+    font-size: 1.5rem;
+}
+
+.gavekort-link {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-block: 0.5rem;
+    color: #a62d7e;
+    text-decoration: none;
+    text-underline-offset: 0.15em;
+}
+
+.gavekort-link-tekst {
+    text-decoration: underline;
+    text-underline-offset: 0.15em; /* Giver lidt luft under teksten. */
+}
+
+.gavekort-link span[aria-hidden="true"] { /* Giver plads mellem teksten og pilen. */
+    margin-inline-start: 0.5rem;
+}
+
+.gavekort-link:focus-visible {
+    outline: 2px solid #185735;
+    outline-offset: 3px;
+}
+
+/* Media queries til MENUEN på smalle skærme og grid-layoutet på brede skærme. */
 
 @media (width < 48rem) {
     /* JavaScript fjerner hidden, når knappen er klar til brug. */
     .menu-knap:not([hidden]) {
-        display: inline-block;
+    display: inline-block;
     }
 
     /* + vælger ul lige efter knappen. Listen skjules, når menuen er lukket. */
     .menu-knap:not([hidden])[aria-expanded="false"] + ul {
-        display: none;
+     display: none;
     }
+
+    .hovedmenu ul {
+    margin-top: 0.5rem;          /* Luft mellem Menu-knappen og listen. */
+    justify-content: flex-start; /* Samler linksene til venstre. */
+    gap: 0.75rem;               /* Afstand mellem Forside og Gaveidéer. */
+    }
+
 }
+
+
 
 /* Fra 48rem (768 pixel) vises indholdet i flere kolonner. */
 @media (min-width: 48rem) {
     .forside-grid {
-        /* Bred kolonne til indlægget og smal kolonne til sidepanelet. */
-        grid-template-columns: 2fr 1fr;
+    /* Bred kolonne til indlægget og smal kolonne til sidepanelet. */
+    grid-template-columns: 2fr 1fr;
     }
 
     .indlaeg-grid {
-        /* To lige brede kolonner til potpourri og bodyscrub. */
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* To lige brede kolonner til potpourri og bodyscrub. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .gaveideer-grid {
-    /* Tre lige brede kolonner på brede skærme. */
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
+
+      /* Tre lige brede kolonner på brede skærme. */
+    #gaveideer .gaveideer-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }

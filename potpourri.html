@@ -10,6 +10,7 @@
     <script src="js/menu.js" defer></script>
 </head>
 <body>
+    <a class="spring-link" href="#hovedindhold">Spring til indhold</a>
     <header class="sidehoved" id="top">
    
 <!-- Kun logo og søgefelt ligger i denne Flexbox-række. -->
@@ -53,7 +54,7 @@
 </ul>
     </nav>
 </header>
-<main>
+ <main id="hovedindhold" tabindex="-1">
   
         <!-- Viser, hvor læseren er, og linker tilbage til forsiden og gaveidéerne. -->
             <nav class="broedkrumme" aria-label="Brødkrummesti">
@@ -87,7 +88,9 @@
 
 
 <section>
-    <h2 id="fremgangsmaade">Sådan laver du potpourri</h2>
+    <!-- tabindex="-1" gør, at overskriften kan få fokus via linket
+     “Gå til guiden”. Ved almindeligt tryk på Tab springes den over. -->
+    <h2 id="fremgangsmaade" tabindex="-1">Sådan laver du potpourri</h2>
 
     <h3>Det skal du bruge</h3>
     <ul class="guide-materialer">
@@ -147,8 +150,11 @@
         </article>
     </div>
 </section>
-
-
+<a class="guide-link tilbage-link" href="index.html#gaveideer"> Tilbage til gaveidéerne</a>
     </main>
+     <footer class="footer">
+        <p>Grønne Gaver · Af Sus-Maj Diana Nielsen</p>
+        <a href="#top">Tilbage til toppen</a>
+    </footer>
 </body>
 </html>
