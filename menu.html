@@ -65,7 +65,7 @@
 
 <!-- Footer links -->
 
- <footer class="footer">
+  <footer class="footer">
     <nav class="footer-links" aria-label="Links i footeren">
         <div>
             <h2>Nyeste blogindlæg</h2>
@@ -120,14 +120,16 @@
         </div>
     </nav>
 
+
+
+
     <section class="nyhedsbrev" id="nyhedsbrev" aria-labelledby="nyhedsbrev-titel">
-        <img class="nyhedsbrev-portraet" src="img/sus-profilbillede-close-up.png"
-             alt="Portræt af Sus-Maj" loading="lazy">
-
-        <div>
-            <h2 id="nyhedsbrev-titel">Få nye idéer i din indbakke</h2>
-            <p>Jeg deler nye gaveidéer og små genbrugstips til dine egne projekter.</p>
-
+        <div class="nyhedsbrev-intro"><img class="nyhedsbrev-portraet" src="img/sus-profilbillede-close-up.png" alt="Portræt af Sus-Maj" loading="lazy">
+                <div>
+                    <h2 id="nyhedsbrev-titel">Få nye idéer i din indbakke</h2>
+                    <p>Jeg deler nye gaveidéer og små genbrugstips til dine egne projekter.</p>
+                </div>
+            </div>
             <form method="post">
                 <label for="nyhedsbrev-fornavn">Fornavn (valgfrit)</label>
                 <input type="text" id="nyhedsbrev-fornavn" name="first_name"
@@ -137,10 +139,13 @@
                 <input type="email" id="nyhedsbrev-email" name="email"
                        autocomplete="email" required>
 
-                <button type="submit" disabled>Tilmeld mig</button>
+                <button type="submit" class="tilmelding">Tilmeld mig</button>
             </form>
         </div>
     </section>
+
+
+
 
     <div class="footer-bund">
         <p>© 2026 Grønne Gaver · Af Sus-Maj Diana Nielsen</p>
