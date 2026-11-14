@@ -23,9 +23,12 @@ body {
     font-weight: bold;
 }
 
+
 .hovedmenu ul {
     /* Flexbox placerer listens li-elementer på en række. */
     display: flex;
+    border-radius: 0.75rem; /* Afrunder alle fire hjørner på menubjælken. */
+   
 
     /* Linkene kan hoppe ned på næste linje, hvis pladsen bliver trang. */
     flex-wrap: wrap;
@@ -43,11 +46,10 @@ body {
     background-color: #185735;
     color: #fff;
     padding-inline: 0.5rem;
+
+    
    
 }
-
-
-
 
 .hovedmenu a {
     display: block;
@@ -240,14 +242,18 @@ h1.velkommen {
 
 .portraet {
     align-self: center; /* Centrer kun billedet i boksen. */
-    width: 8rem;
     max-width: 100%;
     aspect-ratio: 1 / 1; /* Billedrammen er lige bred og høj. */
     object-fit: cover;
     border-radius: 50%; /* Gør det kvadratiske billede rundt. */
 }
 
-
+.velkommen img.portraet {
+    width: 250px;       /* Gør portrættet større. */
+    max-width: 100%;    /* Holder billedet inden for sidepanelet. */
+    height: auto;
+    border-radius: 50%;
+}
 
 .indlaeg-grid {
     /* .indlaeg-grid er parent. Hvert article er et direkte child. */
@@ -528,6 +534,197 @@ p + .guide-link {
 .gavekort-link:focus-visible {
     outline: 2px solid #185735;
     outline-offset: 3px;
+}
+
+
+.footer {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #185735;
+    color: #fff;
+    border-radius: 0.75rem;
+}
+
+.footer h2 {
+    margin: 0 0 0.5rem;
+    color: inherit;
+    font-size: 1.25rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer li + li {
+    margin-top: 0.4rem;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.footer a:hover {
+    color: #ffc4ed;
+}
+
+/* Giver plads mellem mailfelt, label og knap. */
+.footer form {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.footer input,
+.footer button {
+    font: inherit;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.35rem;
+}
+
+.footer input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+}
+
+.footer button {
+    justify-self: start;
+    border: 0;
+    background-color: #d95bb5;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Knappen vises afdæmpet, mens tilmeldingen er deaktiveret. */
+.footer button:disabled {
+    background-color: #e6e6e6;
+    color: #444;
+}
+
+/* Synlig fokusmarkering ved brug af Tab. */
+.footer :is(a, input, button):focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.footer > a {
+    justify-self: start;
+}
+
+.footer {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #185735;
+    color: #fff;
+    border-radius: 0.75rem;
+}
+
+.footer h2 {
+    margin: 0 0 0.5rem;
+    color: inherit;
+    font-size: 1.25rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer li + li {
+    margin-top: 0.4rem;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.footer a:hover {
+    color: #ffc4ed;
+}
+
+/* Giver plads mellem mailfelt, label og knap. */
+.footer form {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.footer input,
+.footer button {
+    font: inherit;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.35rem;
+}
+
+.footer input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+}
+
+.footer button {
+    justify-self: start;
+    border: 0;
+    background-color: #d95bb5;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Knappen vises afdæmpet, mens tilmeldingen er deaktiveret. */
+.footer button:disabled {
+    background-color: #e6e6e6;
+    color: #444;
+}
+
+/* Synlig fokusmarkering ved brug af Tab. */
+.footer :is(a, input, button):focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.footer > a {
+    justify-self: start;
+}
+
+@media (min-width: 48rem) {
+    .footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer > a {
+        justify-self: end;
+    }
+}
+
+@media (min-width: 48rem) {
+    .footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer > a {
+        justify-self: end;
+    }
 }
 
 /* Media queries til MENUEN på smalle skærme og grid-layoutet på brede skærme. */

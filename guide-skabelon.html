@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[RET GAVENS NAVN] | Grønne Gaver</title>
+    <script src="https://kit.fontawesome.com/dcabfbcc56.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <a class="spring-link" href="#hovedindhold">Spring til indhold</a>
+
+    <header class="sidehoved" id="top">
+        <!-- Logo og søgefelt ligger i samme række. -->
+        <div class="topraekke">
+            <div class="logo-omraade">
+                <a class="logo" href="index.html">
+                    <img src="img/Logo-transparent-bg.png" alt="Grønne Gaver – forside">
+                </a>
+            </div>
+
+            <form class="soegning" role="search">
+                <label for="soegeord">Søg efter gaveidéer</label>
+                <div class="soegefelt">
+                    <input type="search" id="soegeord" name="q"
+                           placeholder="Indtast søgeord">
+                    <button type="submit" disabled>Søg</button>
+                </div>
+            </form>
+        </div>
+
+        <nav class="hovedmenu" aria-label="Hovedmenu">
+            <!-- aria-controls peger på listen, som knappen åbner og lukker. -->
+            <button type="button" class="menu-knap"
+                    aria-controls="hovedmenu-links" aria-expanded="false" hidden>
+                <span class="menu-aabn">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                    Menu
+                </span>
+                <span class="menu-luk">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    Luk menu
+                </span>
+            </button>
+
+            <ul id="hovedmenu-links">
+                <li><a href="index.html#top">Forside</a></li>
+                <li><a href="konceptet.html">Konceptet</a></li>
+                <li><a href="index.html#gaveideer">Gaveidéer</a></li>
+                <li><a href="potpourri.html">Potpourri</a></li>
+                <li><a href="Galleri.html">Galleri</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="hovedindhold" tabindex="-1">
+        <nav class="broedkrumme" aria-label="Brødkrummesti">
+            <a href="index.html">Forside</a>
+            <span aria-hidden="true">›</span>
+            <a href="index.html#gaveideer">Gaveidéer</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">[RET GAVENS NAVN]</span>
+        </nav>
+
+        <!-- Introduktion, billede og praktiske oplysninger. -->
+        <section>
+            <h1>[RET GUIDENS OVERSKRIFT]</h1>
+            <p class="guide-intro">[RET KORT INTRO TIL GAVEN]</p>
+
+            <a class="guide-link" href="#fremgangsmaade">
+                Gå til guiden <span aria-hidden="true">↓</span>
+            </a>
+
+            <img class="guide-billede" src="img/[RET BILLEDFIL MED FILENDELSE]"
+                 alt="[RET KORT BESKRIVELSE AF BILLEDET]">
+
+            <p class="guide-info">[RET ARBEJDSTID OG EVENTUEL VENTETID]</p>
+        </section>
+
+        <section>
+            <!-- tabindex="-1" gør, at overskriften kan få fokus via guidelinket. -->
+            <h2 id="fremgangsmaade" tabindex="-1">Sådan laver du [RET GAVENS NAVN]</h2>
+
+            <h3>Det skal du bruge</h3>
+            <ul class="guide-materialer">
+                <li>[RET INGREDIENS ELLER MATERIALE]</li>
+                <li>[RET INGREDIENS ELLER MATERIALE]</li>
+                <li>[RET INGREDIENS ELLER MATERIALE]</li>
+            </ul>
+
+            <h3>Sådan gør du</h3>
+            <ol class="guide-trin">
+                <li>[RET FØRSTE TRIN]</li>
+                <li>[RET ANDET TRIN]</li>
+                <li>[RET TREDJE TRIN]</li>
+            </ol>
+        </section>
+
+        <section class="gave-tip">
+            <i class="fa-solid fa-gift gave-tip-ikon" aria-hidden="true"></i>
+            <div>
+                <h2>Gør gaven personlig</h2>
+                <p>[RET TIP TIL INDPAKNING ELLER GAVEKORT]</p>
+            </div>
+        </section>
+
+        <!-- Gavekortene vises nederst på alle guidesider. -->
+        <section id="gaveideer" tabindex="-1">
+            <h2>Flere Grønne Gaveidéer</h2>
+
+            <div class="gaveideer-grid">
+                <article>
+                    <img src="img/krydderurtesalt.png"
+                         alt="Glas med krydderurtesalt pyntet med snor og et gavemærke">
+                    <h3>Krydderurtesalt</h3>
+                    <p>Lav krydderurtesalt med urter fra haven eller altanen. Fyld det
+                        på et lille genbrugsglas, og sæt et kort på med forslag til,
+                        hvad saltet passer til.</p>
+                    <a class="gavekort-link" href="#"
+                       aria-label="Læs guiden til krydderurtesalt">
+                        <span class="gavekort-link-tekst">Læs guiden</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+
+                <article>
+                    <img src="img/appelsin-vanilje-likor.png"
+                         alt="Et glas appelsinlikør med appelsiner og vanilje ved siden af">
+                    <h3>Appelsinlikør</h3>
+                    <p>Lav en appelsinlikør med appelsinskal, vanilje og vodka fra
+                        barskabet. Hæld den på en genbrugsflaske, og bind et bånd
+                        om halsen.</p>
+                    <a class="gavekort-link" href="appelsin-vanilje-likor.html"
+                       aria-label="Læs guiden til appelsinlikør med vanilje">
+                        <span class="gavekort-link-tekst">Læs guiden</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+
+                <article>
+                    <img src="img/blomsterfro-gavepapir.png"
+                         alt="Foldede frøkuverter af brugt papir med små blomster på">
+                    <h3>Frø fra haven</h3>
+                    <p>Fold små frøkuverter af brugt papir, og fyld dem med frø fra dine
+                        yndlingsblomster. Skriv blomstens navn og et lille såtip på
+                        hver kuvert.</p>
+                    <a class="gavekort-link" href="#"
+                       aria-label="Læs guiden til frø fra haven">
+                        <span class="gavekort-link-tekst">Læs guiden</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <a class="guide-link tilbage-link" href="index.html#gaveideer">
+            Tilbage til gaveidéerne
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>Grønne Gaver · Af Sus-Maj Diana Nielsen</p>
+        <a href="#top">Tilbage til toppen</a>
+    </footer>
+</body>
+</html>

@@ -48,10 +48,15 @@
 
 </button>
     <!-- ul er parent og li child -->
-        <ul id="hovedmenu-links">
-        <li><a href="index.html#top">Forside</a></li>
-        <li><a href="index.html#gaveideer">Gaveidéer</a></li>
-</ul>
+       <ul id="hovedmenu-links">
+           <li><a href="index.html#top" aria-current="page">Forside</a></li>
+            <li><a href="konceptet.html">Konceptet</a></li>
+            <li><a href="index.html#gaveideer">Gaveidéer</a></li>
+            <li><a href="potpourri.html">Potpourri</a></li>
+            <li><a href="Galleri.html">Galleri</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="Kontakt.html">Kontakt</a></li>
+        </ul>
     </nav>
 </header>
  <main id="hovedindhold" tabindex="-1">
@@ -123,33 +128,48 @@
 
 
 <!-- HER STARTER FLERE GRØNNE GAVEIDÉER -->
-<section id="gaveideer">
-    <h2>Flere grønne gaveidéer</h2>
 
-    <!-- .gaveideer-grid er parent. Hvert article er et direkte child. -->
+<!-- Sektionen kan få fokus via et link og springes over ved almindeligt Tab. -->
+
+<!-- .gaveideer-grid er parent. Hvert article er et direkte child. -->
+<section id="gaveideer" tabindex="-1">
+    <h2>Flere Grønne Gaveidéer</h2>
+
     <div class="gaveideer-grid">
         <article>
             <img src="img/krydderurtesalt.png"
-                 alt="Glas med krydderurtesalt pyntet med bånd">
+                 alt="Glas med krydderurtesalt pyntet med snor og et gavemærke">
             <h3>Krydderurtesalt</h3>
-            <p>Bland salt med tørrede krydderurter, og giv det i et lille genbrugsglas.</p>
+            <p>Lav krydderurtesalt med urter fra haven eller altanen. Fyld det på et lille genbrugsglas, og sæt et kort på med forslag til, hvad saltet passer til.</p>
+            <a class="gavekort-link" href="#" aria-label="Læs guiden til krydderurtesalt">
+                <span class="gavekort-link-tekst">Læs guiden</span>
+                <span aria-hidden="true">→</span>
+            </a>
         </article>
 
         <article>
-            <img src="img/appelsin-vanilje-likor.png"
-                 alt="Et glas orange med friske appelsiner ved siden af">
-            <h3>Appelsin-vanilje-likør</h3>
-            <p>Brug appelsiner og vodkaen fra barskabet til en hjemmelavet gave.</p>
+                <img src="img/appelsin-vanilje-likor.png"
+                    alt="Et glas appelsinlikør med appelsiner og vanilje ved siden af">
+                <h3>Appelsinlikør</h3>
+                <p>Lav en appelsinlikør med appelsinskal, vanilje og vodka fra barskabet. Hæld den på en genbrugsflaske, og bind et bånd om halsen.</p>
+                <a class="gavekort-link" href="appelsin-vanilje-likor.html" aria-label="Læs guiden til appelsinlikør med vanilje">
+                    <span class="gavekort-link-tekst">Læs guiden</span>
+                    <span aria-hidden="true">→</span>
+                </a>
         </article>
 
         <article>
             <img src="img/blomsterfro-gavepapir.png"
-                 alt="Foldede frøposer af brugt papir med små blomster på">
+                 alt="Foldede frøkuverter af brugt papir med små blomster på">
             <h3>Frø fra haven</h3>
-            <p>Fold små poser af brugt papir, og giv frø fra dine yndlingsblomster videre.</p>
+           <p>Fold små frøkuverter af brugt papir, og fyld dem med frø fra dine yndlingsblomster. Skriv blomstens navn og et lille såtip på hver kuvert.</p>
+            <a class="gavekort-link" href="#" aria-label="Læs guiden til frø fra haven">Læs guiden <span aria-hidden="true">→</span>
+            </a>
         </article>
     </div>
 </section>
+
+
 <a class="guide-link tilbage-link" href="index.html#gaveideer"> Tilbage til gaveidéerne</a>
     </main>
      <footer class="footer">
