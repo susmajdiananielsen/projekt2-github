@@ -144,11 +144,15 @@ body {
 .soegning label {
     display: block;
     margin-bottom: 0.25rem;
+    margin-left: 10px;
+    color: #BD3B97;
+
 }
 
 .soegefelt {
     /* En separat Flexbox-række til selve feltet og knappen. */
     display: flex;
+   
 }
 
 .soegefelt input {
@@ -156,6 +160,8 @@ body {
     min-width: 0; /* Lader feltet krympe, hvis pladsen er trang. */
     padding: 0.5rem;
     font: inherit;
+    border-radius: 0.5rem 0rem 0.0rem 0.5rem;
+    border: 1px solid #BD3B97;
 }
 
 .soegefelt button {
@@ -163,8 +169,11 @@ body {
     font: inherit;
     background-color: #BD3B97;
     color: #fff;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
     
 }
+
+
 
 .logo {
     /* Linket får en bredde og kan krympe på en smal skærm. */
