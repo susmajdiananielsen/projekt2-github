@@ -47,14 +47,12 @@ body {
     background-color: #185735;
     color: #fff;
     padding-inline: 0.5rem;
-
-    
    
 }
 
 .hovedmenu a {
     display: block;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 3rem;
     color: #fff;
     font-weight: 600;
     text-decoration: none;
@@ -90,7 +88,7 @@ body {
 
 .menu-knap:hover,
 .menu-knap:focus-visible {
-    background-color: #d95bb5;
+    background-color: #bd3b97;
     color: #fff;
 }
 
@@ -163,12 +161,15 @@ body {
 .soegefelt button {
     padding: 0.5rem 0.75rem;
     font: inherit;
+    background-color: #BD3B97;
+    color: #fff;
+    
 }
 
 .logo {
     /* Linket får en bredde og kan krympe på en smal skærm. */
     display: inline-block;
-    width: 30rem;
+    width: 25rem;
     max-width: 100%;
 }
 
@@ -207,6 +208,24 @@ main {
     margin-bottom: 1rem;
 }
 
+.topbanner {
+    /* Billedet følger bredden af sit article. */
+    display: block;
+    width: 100%;
+    height: auto; /* Bevarer billedets proportioner. */
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.tekst-luft{
+margin-bottom: 2rem;
+
+}
+
+.guide-fremgangsmaade {
+    margin-top: 1.5rem;
+}
+
 .spring-link {
     position: fixed;
     top: 1rem;
@@ -231,7 +250,7 @@ main {
     gap: 0.75rem;
     color:#ffffff;
     align-self: start; /* Boksen bliver ikke strakt til artiklens højde. */
-    background-color: #d95bb5;
+    background-color: #bd3b97;
     padding: 1.25rem;
     border-radius: 0.5rem;
     font-weight: 50;
@@ -279,22 +298,19 @@ h1.velkommen {
     /* Lader linket fylde omkring teksten og få luft på alle sider. */
     display: inline-block;
     padding: 0.65rem 1.1rem; /* 2 værdier = Top og bund */
+    margin-bottom: 4rem;
     border-radius: 0.35rem;
-    background-color: #d95bb5;
+    background-color: #bd3b97;
     color: white;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.bottom-2 {
-    display: inline-block; /*luft om teksten på knappen*/
-    padding: 0.65rem 1.1rem; /* 2 værdier = Top og bund */
-    margin-top: 1.1rem;
-    border-radius: 0.35rem;
-    background-color: #185735;
-    color: white;
-    font-weight: bold;
-    justify-content: left;
+.guide-link:hover {
+    background-color: #FFC4ED;
+    color: #BD3B97;
 }
+
 
 
 .guide-intro {
@@ -416,13 +432,13 @@ p + .guide-link {
 }
 
 .gave-tip-ikon {
-    color: #d95bb5;
+    color: #bd3b97;
     font-size: 2rem;
     flex-shrink: 0; /* Bevarer ikonets plads, når teksten går over flere linjer. */
 }
 
 .gave-tip > div {
-    border-left: 2px solid #d95bb5; /* Pink linje langs tekstblokkens venstre kant. */
+    border-left: 2px solid #bd3b97; /* Pink linje langs tekstblokkens venstre kant. */
     padding-left: 1rem;           /* Luft mellem linjen og teksten. */
 }
 .guide-trin > li + li {
@@ -430,12 +446,12 @@ p + .guide-link {
 }
 
 .guide-trin > li::marker {
-    color: #d95bb5; /* Gør selve tallet mørkepink. */
+    color: #bd3b97; /* Gør selve tallet mørkepink. */
     font-weight: 700;
 }
 
 .guide-materialer > li::marker {
-    color: #d95bb5; /* Giver materialelistens punkter samme pink farve som trinnene. */
+    color: #bd3b97; /* Giver materialelistens punkter samme pink farve som trinnene. */
 }
 
 .gave-guide {
@@ -535,7 +551,7 @@ p + .guide-link {
     align-self: flex-start;
     margin-top: auto;
     padding-block: 0.5rem;
-    color: #a62d7e;
+    color: #BD3B97;
     text-decoration: none;
     text-underline-offset: 0.15em;
 }
@@ -561,7 +577,7 @@ p + .guide-link {
 }
 
 .footer .tilmelding:hover {
-    background-color: #9b066e;
+    background-color: #BD3B97;
 }
 
 #nyhedsbrev {
@@ -573,10 +589,11 @@ p + .guide-link {
     width: 100%;
     max-width: 100%;
     margin-inline: auto;
-    margin-top: 1.5rem;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
     padding: clamp(1rem, 3vw, 1.5rem);
     border-radius: 0.75rem;
-    background-color:#d95bb5;
+    background-color:#bd3b97;
     color: #ffffff;
     
 
@@ -607,7 +624,7 @@ p + .guide-link {
 
 
 #nyhedsbrev .tilmelding {   /*tilmeldingsknappen*/
-   font: inherit;
+    font: inherit;
     font-weight: 600;
     padding: 0.75rem 1.25rem;
     border: 0;
@@ -624,8 +641,8 @@ p + .guide-link {
     justify-self: start;
     padding: 0.75rem 1.25rem;
     border-radius: 0.35rem;
-    color:#fff;
-    background-color: #8b2365;
+    color:#BD3B97;
+    background-color: #FFC4ED;
     width: auto;
 
 }
@@ -637,7 +654,7 @@ p + .guide-link {
     border-radius: 0.35rem;
     font: inherit;
     padding: 0.75rem 1rem;
-    border: 1px solid #876478;
+    border: 1px solid #BD3B97;
     border-radius: 0.35rem;
     background-color: #fff;
 
@@ -645,7 +662,7 @@ p + .guide-link {
 
 
 a.nyhedsbrev-link img {
-    color:#e6e6e6;
+    color:#185735;
     padding: 3px;
     font-weight: bold;
     display: inline-block;
@@ -721,15 +738,15 @@ a.nyhedsbrev-link img {
 .footer button {
     justify-self: start;
     border: 0;
-    background-color: #d95bb5;
-    color: #1a1a1a;
+    background-color: #FFC4ED;
+    color: #185735;
     font-weight: 600;
 }
 
 /* Knappen vises afdæmpet, mens tilmeldingen er deaktiveret. */
 .footer button:disabled {
-    background-color: #e6e6e6;
-    color: #444444;
+    background-color: #185735;
+    color: #185735;
 }
 
 /* Synlig fokusmarkering ved brug af Tab. */
@@ -792,7 +809,7 @@ a.nyhedsbrev-link img {
 }
 
 .footer a:hover {
-    color: #d95bb5;
+    color: #FFC4ED;
 }
 
 /* Giver plads mellem mailfelt, label og knap. */
@@ -820,8 +837,8 @@ a.nyhedsbrev-link img {
 .footer button {
     justify-self: start;
     border: 0;
-    background-color: #d95bb5;
-    color: #1a1a1a;
+    background-color: #FFC4ED;
+    color: #185735;
     font-weight: 600;
 }
 
@@ -829,24 +846,24 @@ a.nyhedsbrev-link img {
 .footer button a {
     justify-self: start;
     border: 0;
-    background-color: #410730;
-    color: #1a1a1a;
+    background-color: #FFC4ED;
+    color: #185735;
     font-weight: 600;
 }
 
 .footer button :hover {
     justify-self: start;
     border: 0;
-    background-color: #eb11ad;
-    color: #1a1a1a;
+    background-color: #EE5E03;
+    color: #185735;
     font-weight: 600;
 }
 
 
 /* Knappen vises afdæmpet, mens tilmeldingen er deaktiveret.*/
 .footer button:enabled {
-    background-color: #d95bb5;
-    color:#e6e6e6;
+    background-color: #bd3b97;
+    color:#185735;
 }
 
 
@@ -871,11 +888,9 @@ a.nyhedsbrev-link img {
     padding: clamp(1rem, 3vw, 1.5rem);
     border-radius: 0.75rem;
     background-color:#ee5e03;
-    color: #e6e6e6;
+    color: #fff;
 
 }
-
-
 #sporgeskema img{
     /*display: block;*/
     max-width: 100%;
@@ -883,10 +898,35 @@ a.nyhedsbrev-link img {
     border-radius: 0.75rem;
 }
 
+.button2 {
+    font: inherit;
+    font-weight: 600;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 0;
+    border-radius: 0.35rem;
+    background-color: #185735;
+    color: #fff;
+    justify-self: start;
+    width: auto;
+    
+}
+
+.button2 > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button2:hover {
+    background-color: #BD3B97;
+}
+
+
+
 
 
 a.sporgeskema-link img {
-    color:#e6e6e6;
+    color:#fff;
     padding: 3px;
     font-weight: bold;
     display: inline-block;
@@ -939,7 +979,8 @@ a.sporgeskema-link img {
     margin-bottom:5rem ;
 }
 
-/* Media queries til MENUEN på smalle skærme og grid-layoutet på brede skærme. */
+
+/*hvis skærm er smallere end 768px */
 
 @media (width < 48rem) {
     /* JavaScript fjerner hidden, når knappen er klar til brug. */
@@ -957,7 +998,9 @@ a.sporgeskema-link img {
         justify-content: flex-start; /* Samler linksene til venstre. */
         gap: 0.75rem;               /* Afstand mellem Forside og Gaveidéer. */
     }
-
+.logo {
+    width: 15rem;
+}
 }
 
 /*På brede skærme*/

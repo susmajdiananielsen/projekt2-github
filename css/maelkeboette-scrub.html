@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mælkebøtte Scrub</title>
+    <script src="https://kit.fontawesome.com/dcabfbcc56.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <a class="spring-link" href="#hovedindhold">Spring til indhold</a>
+    <header class="sidehoved" id="top">
+   
+<!-- Kun logo og søgefelt ligger i denne Flexbox-række. -->
+<div class="topraekke">
+    <div class="logo-omraade">
+        <a class="logo" href="index.html">
+            <img src="img/Logo-transparent-bg.png" alt="Grønne Gaver logo"></a>
+    </div>
+
+    <form class="soegning" role="search">
+        <!-- Label beskriver feltet. For og id skal være ens. -->
+        <label for="soegeord">Søg efter gaveidéer</label>
+
+        <div class="soegefelt">
+            <input type="search" id="soegeord" name="q"
+                   placeholder="Indtast søgeord">
+            <button type="submit" disabled>Søg</button>
+        </div>
+    </form>
+</div>
+
+    <!-- Topmenu start -->
+    <nav class="hovedmenu" aria-label="Hovedmenu">
+    <!-- aria-controls peger på listen. aria-expanded fortæller, om den er åben. -->
+     <button type="button" class="menu-knap" aria-controls="hovedmenu-links" aria-expanded="false" hidden>
+    <!-- Knappen har en tekst til hver tilstand. Ikonerne er pynt. -->
+<span class="menu-aabn">
+    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    Menu
+</span>
+<span class="menu-luk">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    Luk menu
+</span>
+
+</button>
+    <!-- ul er parent og li child -->
+       <ul id="hovedmenu-links">
+           <li><a href="index.html#top">Forside</a></li>
+            <li><a href="konceptet.html">Konceptet</a></li>
+            <li><a href="index.html#gaveideer">Gaveidéer</a></li>
+            <li><a href="potpourri.html">Potpourri</a></li>
+            <li><a href="galleri.html">Galleri</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+ <main id="hovedindhold" tabindex="-1">
+  
+        <!-- Viser, hvor læseren er, og linker tilbage til forsiden og gaveidéerne. -->
+            <nav class="broedkrumme" aria-label="Brødkrummesti">
+                <a href="index.html">Forside</a>
+                <span aria-hidden="true">›</span>
+                <a href="index.html#gaveideer">Gaveidéer</a>
+                <span aria-hidden="true">›</span>
+                <span aria-current="page">Potpourri</span>
+            </nav>
+
+        <!-- Her starter potpourriguiden. -->
+    <section id="potpourri-guide">  
+        <h1>Lav din egen krydderurtesalt</h1>
+        <!-- Kort intro mellem sidens titel og guidelinket. -->
+
+       <p class="guide-intro">
+        En duftende gave af blomster og citrusskaller. Giv tørrede blomster og citrusskaller nyt liv i et genbrugsglas. Pynt med snor eller bånd, og tilføj en personlig hilsen.
+        </p>
+
+        <!-- Hopper til fremgangsmåden længere nede på samme side. -->
+        <a class="guide-link" href="#fremgangsmaade">Gå til guiden ↓</a>
+
+        <!-- Guidens store billede. -->
+        <img class="guide-billede" src="img/krydderurtesalt.png" alt="Hjemmelavet kryderurtesalt på genbrugsglas som gave">
+
+
+        
+        <!-- Kort praktisk info før selve guiden. -->
+        <p class="guide-info">Arbejdstid: ca. 10 min. · Brug helt tørre materialer</p>
+    </section>
+
+
+<section>
+    <!-- tabindex="-1" gør, at overskriften kan få fokus via linket
+     “Gå til guiden”. Ved almindeligt tryk på Tab springes den over. -->
+    <h2 id="fremgangsmaade" tabindex="-1">Sådan laver du potpourri</h2>
+
+    <h3 class="guide-fremgangsmaade">Det skal du bruge</h3>
+        <ul class="guide-materialer">
+            <li>Tørrede rosenblade og lavendel</li>
+            <li>Helt tørre citrusskaller</li>
+            <li>Et rent, tørt genbrugsglas</li>
+            <li>Snor, bånd eller et lille kort</li>
+        </ul>
+
+    <h3 class="guide-fremgangsmaade">Sådan gør du</h3>
+    
+        <!-- En nummereret liste viser, at trinnene har en rækkefølge. -->
+        <ol class="guide-trin">
+            <li>Sørg for, at blomster og citrusskaller er helt tørre.</li>
+            <li>Bland dem forsigtigt, og kom dem i glasset.</li>
+            <li>Pynt glasset, og tilføj en personlig hilsen.</li>
+        </ol>
+</section>
+
+<!-- Gavetip efter fremgangsmåden. -->
+<section class="gave-tip">
+    <!-- Ikonet er pynt. Overskriften fortæller, hvad boksen handler om. -->
+    <i class="fa-solid fa-gift gave-tip-ikon" aria-hidden="true"></i>
+
+    <div>
+        <h2>Gør gaven personlig</h2>
+        <p>Pynt glasset med en stofrest eller et bånd, og skriv en lille hilsen på et kort af brugt papir.</p>
+    </div>
+</section>
+
+
+<!-- HER STARTER FLERE GRØNNE GAVEIDÉER -->
+
+<!-- Sektionen kan få fokus via et link og springes over ved almindeligt Tab. -->
+
+<!-- .gaveideer-grid er parent. Hvert article er et direkte child. -->
+<section id="gaveideer" tabindex="-1">
+    <h2>Flere Grønne Gaveidéer</h2>
+    <div class="gaveideer-grid">
+        <article>
+            <img src="img/krydderurtesalt.png"
+                 alt="Glas med krydderurtesalt pyntet med snor og et gavemærke">
+            <h3>Krydderurtesalt</h3>
+            <p>Lav krydderurtesalt med urter fra haven eller altanen. Fyld det på et lille genbrugsglas, og sæt et kort på med forslag til, hvad saltet passer til.</p>
+            <a class="gavekort-link" href="https://susmaj.dk/gronne-gaver/potpourri.html" aria-label="Læs guiden til krydderurtesalt">
+                <span class="gavekort-link-tekst">Læs guiden</span>
+                <span aria-hidden="true">→</span>
+            </a>
+        </article>
+
+        <article>
+                <img src="img/appelsin-vanilje-likor.png"
+                    alt="Et glas appelsinlikør med appelsiner og vanilje ved siden af">
+                <h3>Appelsinlikør</h3>
+                <p>Lav en appelsinlikør med appelsinskal, vanilje og vodka fra barskabet. Hæld den på en genbrugsflaske, og bind et bånd om halsen.</p>
+                <a class="gavekort-link" href="https://susmaj.dk/gronne-gaver/potpourri.html" aria-label="Læs guiden til appelsinlikør med vanilje">
+                    <span class="gavekort-link-tekst">Læs guiden</span>
+                    <span aria-hidden="true">→</span>
+                </a>
+        </article>
+
+        <article>
+            <img src="img/blomsterfro-gavepapir.png"
+                 alt="Foldede frøkuverter af brugt papir med små blomster på">
+            <h3>Frø fra haven</h3>
+           <p>Fold små frøkuverter af brugt papir, og fyld dem med frø fra dine yndlingsblomster. Skriv blomstens navn og et lille såtip på hver kuvert.</p>
+            <a class="gavekort-link" href="https://susmaj.dk/gronne-gaver/potpourri.html" aria-label="Læs guiden til frø fra haven">Læs guiden <span aria-hidden="true">→</span>
+            </a>
+        </article>
+    </div>
+</section>
+
+    </main>
+     <!-- Footer links -->
+
+ <footer class="footer">
+    <nav class="footer-links" aria-label="Links i footeren">
+        <div>
+            <h2>Nyeste blogindlæg</h2>
+            <ul>
+                <li><a href="#">Efterårsroser af blade</a></li>
+                <li><a href="index.html#gaveideer">Gaveidéer</a></li>
+                <li><a href="#">Genbrugstips</a></li>
+                <li><a href="#">Top 5 idéer til jul</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Følg mig</h2>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Pinterest</a></li>
+                <li><a href="#nyhedsbrev">Nyhedsbrev</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Genbrugstips</h2>
+            <ul>
+                <li><a href="index.html#top">Forside</a></li>
+                <li><a href="index.html#gaveideer">Gaveidéer</a></li>
+                <li><a href="#">Genbrugstips</a></li>
+                <li><a href="#">Om mig</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Gaveidéer efter tema</h2>
+            <ul>
+                <li><a href="#">Jule-DIY</a></li>
+                <li><a href="#">Nytårs-DIY</a></li>
+                <li><a href="#">Påske-DIY</a></li>
+                <li><a href="#">Fødselsdags-DIY</a></li>
+                <li><a href="#">Værtindegaver</a></li>
+                <li><a href="#">Valentinsgaver</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Kontakt</h2>
+            <ul>
+                <li><a href="#">E-mail</a></li>
+                <li><a href="Kontakt.html">Kontaktformular</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Privatlivspolitik</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="footer-bund">
+        <p>© 2026 Grønne Gaver · Af Sus-Maj Diana Nielsen</p>
+        <a href="#top">Tilbage til toppen</a>
+    </div>
+</footer>
+</body>
+</html>

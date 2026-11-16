@@ -35,27 +35,25 @@
 <nav class="hovedmenu" aria-label="Hovedmenu">
             <!-- aria-controls peger på listen. aria-expanded fortæller, om den er åben. -->
             <button type="button" class="menu-knap" aria-controls="hovedmenu-links" aria-expanded="false" hidden>
-            <!-- Knappen har en tekst til hver tilstand. Ikonerne er pynt. -->
-        <span class="menu-aabn">
-            <i class="fa-solid fa-bars" aria-hidden="true"></i>
-            Menu
-        </span>
-        <span class="menu-luk">
-            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            Luk menu
-        </span>
+                    <!-- Knappen har en tekst til hver tilstand. Ikonerne er pynt. -->
+                <span class="menu-aabn">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                    Menu
+                </span>
+                <span class="menu-luk">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    Luk menu
+                </span>
 
         </button>
-                <ul id="hovedmenu-links">
-                    <li><a href="index.html#top" aria-current="page">Forside</a></li>
+                 <ul id="hovedmenu-links">
+                    <li><a href="index.html" aria-current="page">Forside</a></li>
                     <li><a href="konceptet.html">Konceptet</a></li>
-                    <li><a href="index.html#gaveideer">Gaveidéer</a></li>
-                    <li><a href="potpourri.html">Potpourri</a></li>
-                    <li><a href="galleri.html">Galleri</a></li>
+                    <li><a href="guider.html">Guider</a></li> 
                     <li><a href="video.html">Video</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
-            </nav>
+</nav>
         </header>
 
             <main id="hovedindhold" tabindex="-1">
@@ -67,10 +65,10 @@
         <div class="forside-grid">
             <!-- Første child: Det fremhævede indlæg. -->
             <article>
-                <img class="forsidebillede"src="img/rosenbadesalt.png" alt="Et glas med badesalt og tørrede rosenblade">
+                <a href="badesalt-rosenblade.html"><img class="forsidebillede"src="img/rosenbadesalt.png" alt="Et glas med badesalt og tørrede rosenblade"></a>
                 <h2>Badesalt med rosenblade</h2>
                 <p>Med groft salt, tørrede rosenblade og et genbrugsglas kan du lave en lille gave til et varmt fodbad. Bind et bånd om glasset, og sæt et kort på med en hilsen og et tip til, hvordan badesaltet bruges. Så har du en personlig værtindegave, du kan lave med det, du allerede har..</p>
-                    <a class="guide-link" href="potpourri.html">Se hvordan du gør</a>
+                    <a class="guide-link" href="badesalt-rosenblade.html">Se hvordan du gør</a>
             </article>
 
         <!-- Sidepanelet er et direkte child af .forside-grid. -->
@@ -89,11 +87,9 @@
                 <ul>
                     <li><a href="index.html#top" aria-current="page">Forside</a></li>
                     <li><a href="konceptet.html">Konceptet</a></li>
-                    <li><a href="index.html#gaveideer">Gaveidéer</a></li>
-                    <li><a href="potpourri.html">Potpourri</a></li>
-                    <li><a href="Galleri.html">Galleri</a></li>
+                    <li><a href="guider.html"  aria-current="page">Guider</a></li> 
                     <li><a href="video.html">Video</a></li>
-                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
         </aside>
@@ -102,8 +98,7 @@
 <!-- .indlaeg-grid er parent. Hvert article er et direkte child. -->
 <div class="indlaeg-grid">
     <article>
-        <img src="img/potpourri.png"
-             alt="Glas med tørrede rosenblade, lavendel og appelsinskiver">
+        <a href="potpourri.html"><img src="img/potpourri.png" alt="Glas med tørrede rosenblade, lavendel og appelsinskiver"></a>
         <h2>Lav din egen potpourri</h2>
         <p>Giv tørrede rosenblade, lavendel og appelsinskal nyt liv som duftende pynt. Kom blandingen i et genbrugsglas, og bind en snor om det. Skriv på et lille kort, at duftblandingen kan hældes i en skål.</p>
             <!-- Linket hopper til det element, der har id="potpourri-guide". -->
@@ -111,8 +106,8 @@
     </article>
 
     <article>
-        <img src="img/maelkeboette-scrub.png"
-             alt="Et lille glas med bodyscrub og gule mælkebøtter ved siden af">
+        <a href="maelkeboette-scrub.html"><img src="img/maelkeboette-scrub.png"
+             alt="Et lille glas med bodyscrub og gule mælkebøtter ved siden af"></a>
         <h2>Bodyscrub med mælkebøtte</h2>
         <p>Lav en hjemmelavet bodyscrub med mælkebøtte, og fyld den på et lille, rent genbrugsglas. Pynt låget med en stofrest, og bind et gavemærke om glasset med en kort vejledning til, hvordan scrubben bruges.</p>
             <a class="guide-link" href="#.html">Se hvordan du gør</a>
@@ -126,56 +121,41 @@
 <!-- .gaveideer-grid er parent. Hvert article er et direkte child. -->
 <section id="gaveideer" tabindex="-1">
     <h2>Flere Grønne Gaveidéer</h2>
-
     <div class="gaveideer-grid">
         <article>
-            <img src="img/krydderurtesalt.png"
-                 alt="Glas med krydderurtesalt pyntet med snor og et gavemærke">
+            <a href="krydderurtesalt.html"><img src="img/krydderurtesalt.png"
+                 alt="Glas med krydderurtesalt pyntet med snor og et gavemærke"></a>
             <h3>Krydderurtesalt</h3>
             <p>Lav krydderurtesalt med urter fra haven eller altanen. Fyld det på et lille genbrugsglas, og sæt et kort på med forslag til, hvad saltet passer til.</p>
-            <a class="gavekort-link" href="#" aria-label="Læs guiden til krydderurtesalt">
+            <a class="gavekort-link" href="https://susmaj.dk/gronne-gaver/potpourri.html" aria-label="Læs guiden til krydderurtesalt">
                 <span class="gavekort-link-tekst">Læs guiden</span>
                 <span aria-hidden="true">→</span>
             </a>
         </article>
 
         <article>
-                <img src="img/appelsin-vanilje-likor.png"
-                    alt="Et glas appelsinlikør med appelsiner og vanilje ved siden af">
+                <a href="appelsin-vanilje-likor.html"><img src="img/appelsin-vanilje-likor.png"
+                    alt="Et glas appelsinlikør med appelsiner og vanilje ved siden af"></a>
                 <h3>Appelsinlikør</h3>
                 <p>Lav en appelsinlikør med appelsinskal, vanilje og vodka fra barskabet. Hæld den på en genbrugsflaske, og bind et bånd om halsen.</p>
-                <a class="gavekort-link" href="appelsin-vanilje-likor.html" aria-label="Læs guiden til appelsinlikør med vanilje">
+                <a class="gavekort-link" href="https://susmaj.dk/gronne-gaver/potpourri.html" aria-label="Læs guiden til appelsinlikør med vanilje">
                     <span class="gavekort-link-tekst">Læs guiden</span>
                     <span aria-hidden="true">→</span>
                 </a>
         </article>
 
         <article>
-            <img src="img/blomsterfro-gavepapir.png"
-                 alt="Foldede frøkuverter af brugt papir med små blomster på">
+            <a href="fro-fra-haven.html"><img src="img/blomsterfro-gavepapir.png"
+                 alt="Foldede frøkuverter af brugt papir med små blomster på"></a>
             <h3>Frø fra haven</h3>
            <p>Fold små frøkuverter af brugt papir, og fyld dem med frø fra dine yndlingsblomster. Skriv blomstens navn og et lille såtip på hver kuvert.</p>
-            <a class="gavekort-link" href="#" aria-label="Læs guiden til frø fra haven">Læs guiden <span aria-hidden="true">→</span>
+            <a class="gavekort-link" href="https://susmaj.dk/gronne-gaver/potpourri.html" aria-label="Læs guiden til frø fra haven">Læs guiden <span aria-hidden="true">→</span>
             </a>
         </article>
     </div>
 </section>
-<section id="sporgeskema">
-    <div class="sporgeskema-tekst">
-        <h2 class="sporgeskema-overskrift">Hvilken hjemmelavet gave ville du selv lave?</h2>
-        <p>Hjælp mig med at vælge, hvilke gaveidéer jeg skal fremhæve. Som tak får du opskriften på appelsinlikør.</p>
-        <p>Anonymt spørgeskema · ca. 2 minutter</p>
-        <a class="bottom-2" href="https://forms.gle/6KBMcWYMsLa41sjE8">Svar på spørgeskemaet</a>
 
-        <!-- <p class="sporgeskema-link"><a href="https://forms.gle/6KBMcWYMsLa41sjE8" class="sporgeskema-link">Svar på spørgeskemaet →</a>-->
-        
-        </p>
-    </div>
-    <div>
-        <a href="https://forms.gle/6KBMcWYMsLa41sjE8">
-        <img src="img/appelsinlikor-appelsin-gavebaand.png" alt="Svar på spørgsmål om hjemmelavede gaver"></a>
-    </div>
-</section>
+
 
 
 <section class="nyhedsbrev" id="nyhedsbrev" aria-labelledby="nyhedsbrev-titel">
