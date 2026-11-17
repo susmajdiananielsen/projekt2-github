@@ -11,6 +11,11 @@ body {
     line-height: 1.6; /* Giver mere luft mellem tekstlinjerne. */
 }
 
+h1, h2, h3 {
+    font-family: "DynaPuff", sans-serif;
+    font-weight: 600;
+}
+
 .sidehoved {
     max-width: 70rem;
     margin: 0 auto; /* Centrerer sidens top på en bred skærm. */
@@ -189,6 +194,20 @@ body {
     height: auto; /* Bevarer billedets proportioner. */
 }
 
+.tilbage-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.625rem 1rem;
+    background-color: #185735;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.tilbage-link:focus-visible {
+    outline: 3px solid #185735;
+    outline-offset: 3px;
+}
+
 main {
     /* Samme bredde og sideafstand som sidens header. */
     max-width: 70rem;
@@ -285,6 +304,46 @@ h1.velkommen {
     border-radius: 50%;
 }
 
+.inspirationsliste {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.some a {
+    display: flex;
+    flex-direction: column; /* Placér de tre children under hinanden. */
+    align-items: flex-start; /* Hold teksten til venstre. */
+    gap: 0.75rem;
+    color:#165369;
+    align-self: start; /* Boksen bliver ikke strakt til artiklens højde. */
+    /*background-color: #CFE6EA;*/
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    font-weight: 50;
+}
+
+
+
+.sociale-ikoner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    background-color: #CBE3E7;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.sociale-ikoner a {
+    display: inline-grid;
+    place-items: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    color: inherit;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+
 .indlaeg-grid {
     /* .indlaeg-grid er parent. Hvert article er et direkte child. */
     display: grid;
@@ -331,17 +390,13 @@ p + .guide-link {
     margin-top: 1rem;
 }
 
-.tilbage-link {
-    margin-top: 1rem; /* Luft mellem gaveidéerne og returlinket. */
-}
-
 .guide-link:focus-visible {
     /* Gør linket tydeligt, når det får fokus med Tab. */
     outline: 3px solid #185735;
     outline-offset: 4px;
 }
 
-#potpourri-guide {
+#guide {
     /* Giver luft over guiden, når et link hopper ned til den. */
     scroll-margin-top: 1rem;
 }
@@ -584,6 +639,30 @@ p + .guide-link {
     outline: 2px solid #185735;
     outline-offset: 3px;
 }
+
+
+.link-tekst a{
+    text-decoration: underline;
+    text-underline-offset: 0.15em; /* Giver lidt luft under teksten. */
+    color: #fff;
+}
+
+.inspirationsikon {
+    width: 1.5em;
+    margin-right: 0.5rem;
+    color: #185735;
+    text-align: center;
+}
+
+.gavekort-link span[aria-hidden="true"] { /* Giver plads mellem teksten og pilen. */
+    margin-inline-start: 0.5rem;
+}
+
+.gavekort-link:focus-visible {
+    outline: 2px solid #185735;
+    outline-offset: 3px;
+}
+
 
 .footer .tilmelding:hover {
     background-color: #BD3B97;
@@ -986,6 +1065,38 @@ a.sporgeskema-link img {
     aspect-ratio: 16 / 9;
     border: 0;
     margin-bottom:5rem ;
+}
+
+@media (width < 48rem) {  /* Nyhedsbrevet vises i én kolonne på mobil, nårt smallere end 768 pixels */ 
+    #nyhedsbrev {
+        grid-template-columns: minmax(0, 1fr); 	
+        /*Definerer én kolonne. 0 gør, at kolonnen må krympe, når pladsen er trang. 
+        1fr betyder, at den ene kolonne får hele den tilgængelige bredde i gridet.*/
+        gap: 1rem;
+        margin-block: 2rem;
+    }
+
+
+    #nyhedsbrev img {
+        width: 8rem;
+        margin: 0 0 0.75rem;
+    }
+
+    #nyhedsbrev input {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-links {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+        padding-left: 0;
+    }
 }
 
 
