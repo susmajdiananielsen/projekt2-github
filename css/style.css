@@ -28,6 +28,11 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
+ul.liste-punkter li{
+margin:1rem;
+list-style-type:disc;
+}
+
 
 .hovedmenu ul {
     /* Flexbox placerer listens li-elementer på en række. */
@@ -247,7 +252,6 @@ main {
 
 .tekst-luft{
 margin-bottom: 2rem;
-
 }
 
 .guide-fremgangsmaade {
@@ -287,6 +291,11 @@ margin-bottom: 2rem;
 h1.velkommen {
     font-size: 0.5rem;
     margin-bottom: 0.25rem; /* Lille afstand mellem overskrift og tekst. */
+}
+
+.overskrift{
+margin-bottom: 1rem;
+
 }
 
 .portraet {
@@ -766,7 +775,11 @@ a.nyhedsbrev-link img {
     background-color: transparent;
 }
 
+.liste{
+text-decoration: dotted;
 
+
+}
 
 .footer {
     display: grid;
@@ -1010,9 +1023,6 @@ a.nyhedsbrev-link img {
 }
 
 
-
-
-
 a.sporgeskema-link img {
     color:#fff;
     padding: 3px;
@@ -1020,7 +1030,6 @@ a.sporgeskema-link img {
     display: inline-block;
     margin-top: 0.75rem;
    
-
 }
 
  #sporgeskema h2 {
@@ -1030,7 +1039,28 @@ a.sporgeskema-link img {
     background-color: transparent;
 }
 
+.youtube-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    margin-bottom:2rem ;
+    margin-top:2rem;
+}
 
+.video-beskrivelse{
+ margin-bottom:3rem;
+
+}
+
+.video-tekst{
+ margin-top:2rem;
+}
+
+div.tekst-luft-video{
+ margin-bottom: 6rem;
+
+}
 
 @media (min-width: 48rem) {
     .footer {
@@ -1059,13 +1089,7 @@ a.sporgeskema-link img {
 
 }
 
-.youtube-video {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: 0;
-    margin-bottom:5rem ;
-}
+
 
 @media (width < 48rem) {  /* Nyhedsbrevet vises i én kolonne på mobil, nårt smallere end 768 pixels */ 
     #nyhedsbrev {
