@@ -72,6 +72,9 @@ list-style-type:disc;
 }
 
 
+/* =========================================
+   HOVEDMENU
+   ========================================= */
 .hovedmenu ul {
     /* Flexbox placerer listens li-elementer på en række. */
     display: flex;
@@ -166,6 +169,7 @@ list-style-type:disc;
 }
 
 
+
 .sidehoved a:focus-visible {
     /* Gør det tydeligt, hvilket link der har fokus, når du bruger Tab. */
     outline: 3px solid #185735;
@@ -183,6 +187,10 @@ list-style-type:disc;
     margin-bottom: 1.5rem; /* Luft mellem toprækken og menuen. */
 }
 
+
+/* =========================================
+   SØG
+   ========================================= */
 .soegning {
     /* Formularen må gerne blive smallere end 16rem på mobilen. */
     width: 16rem;
@@ -311,11 +319,15 @@ main {
 }
 
 .tekst-luft{
-margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .guide-fremgangsmaade {
     margin-top: 1.5rem;
+}
+
+.guide{
+  margin-top: 3rem;  
 }
 
 .spring-link {
@@ -333,6 +345,10 @@ margin-bottom: 2rem;
 .spring-link:focus {
     transform: none;
 }
+
+/* =========================================
+   VELKOMMEN
+   ========================================= */
 
 .velkommen {
     /* Parent til portræt, overskrift og tekst. */
@@ -385,12 +401,49 @@ h1.velkommen {
     color: #bd3b97;
 }
 
+.inspirationsboks {
+    background-color: #DBE8D3;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.inspirationsboks h3 {
+    color: #185735;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-dato {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #bd3b97;
+    margin-bottom: 0.5rem;
+}
+
+.navn {
+    font-size: 1rem;
+    color: #bd3b97;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+h2.overskrift-forside {
+    font-size: 2rem;
+    color: #185735;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   SOME 
+   ========================================= */
+
 .some a {
     display: flex;
     flex-direction: column; /* Placér de tre children under hinanden. */
     align-items: flex-start; /* Hold teksten til venstre. */
     gap: 0.75rem;
-    color:#165369;
+    color:#bd3b97;
     align-self: start; /* Boksen bliver ikke strakt til artiklens højde. */
     /*background-color: #CFE6EA;*/
     padding: 1.25rem;
@@ -530,6 +583,9 @@ p + .guide-link {
     align-self: start; /* Sidepanelet starter øverst i sin Grid-kolonne. */
 }
 
+/* =========================================
+   INSPIRATION
+   ========================================= */
 .inspiration {
     background-color: #dbe8d3;
     padding: 1.25rem;
@@ -553,7 +609,9 @@ p + .guide-link {
     outline: 3px solid #185735;
     outline-offset: 3px;
 }
-
+/* =========================================
+   GUIDE
+   ========================================= */
 
 /*Portpourri Guide*/
 .guide-billede {
@@ -644,6 +702,10 @@ p + .guide-link {
     margin-bottom: 1rem; /* Giver luft ned til sidens titel. */
 }
 
+/* =========================================
+   FOOTER
+   ========================================= */
+
 .footer {
     margin-top: 2rem;        /* Luft mellem gaveidéerne og sidefoden. */
     padding: 1.25rem 1rem;   /* Luft omkring teksten inde i sidefoden. */
@@ -659,9 +721,46 @@ p + .guide-link {
     text-decoration: underline;
 }
 
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 70rem;
+    margin-inline: auto;
+
+}
+
+.footer-bund {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
 .footer a:focus-visible {
     outline: 2px solid #fff;
     outline-offset: 4px;
+}
+
+
+.bunden {
+    margin:1rem;        /* Luft mellem gaveidéerne og sidefoden. */
+    color: #bd3b97;
+    width: 100%;
+    text-align: center;
+}
+
+.bunden :hover{
+    margin:1rem;        /* Luft mellem gaveidéerne og sidefoden. */
+    color: #185735;
+    width: 100%;
+    text-align: center;
 }
 
 /* Viser en tydelig fokuskant inde i menulinket. */
@@ -765,9 +864,6 @@ p + .guide-link {
 }
 
 
-.footer .tilmelding:hover {
-    background-color: #BD3B97;
-}
 
 #nyhedsbrev {
     display: grid;
@@ -784,7 +880,6 @@ p + .guide-link {
     border-radius: 0.75rem;
     background-color:#bd3b97;
     color: #ffffff;
-    
 
 }
 
@@ -867,229 +962,12 @@ a.nyhedsbrev-link img {
     background-color: transparent;
 }
 
-.liste{
-text-decoration: dotted;
+.liste {
+    text-decoration: dotted;
 
 
 }
 
-.footer {
-    display: grid;
-    gap: 1.5rem;
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background-color: #185735;
-    color: #fff;
-    border-radius: 0.75rem;
-    margin-inline: auto;
-}
-
-.footer h2 {
-    margin: 0 0 0.5rem;
-    color: inherit;
-    font-size: 1.25rem;
-}
-
-.footer p {
-    margin: 0;
-}
-
-.footer ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.footer li + li {
-    margin-top: 0.4rem;
-}
-
-.footer a {
-    color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-}
-
-.footer a:hover {
-    color: #ffc4ed;
-}
-
-.footer input,
-.footer button {
-    font: inherit;
-    padding: 0.65rem 0.85rem;
-    border-radius: 0.35rem;
-}
-
-.footer input {
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-    border: 1px solid #fff;
-}
-
-.footer button {
-    justify-self: start;
-    border: 0;
-    background-color: #FFC4ED;
-    color: #185735;
-    font-weight: 600;
-}
-
-/* Knappen vises afdæmpet, mens tilmeldingen er deaktiveret. */
-.footer button:disabled {
-    background-color: #185735;
-    color: #185735;
-}
-
-/* Synlig fokusmarkering ved brug af Tab. */
-.footer :is(a, input, button):focus-visible {
-    outline: 2px solid #fff;
-    outline-offset: 3px;
-}
-
-.footer > a {
-    justify-self: start;
-}
-
-.footer {
-    display: grid;
-    padding-top: 5rem;
-    background-color: #185735;
-    color: #fff;
-    border-radius: 0.75rem;
-    padding-inline: 10rem;
-    gap: 0.75rem 1.5rem;
-}
-.footer-bund {
-    text-align: center;
-
-}
-
-.footer-links{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10rem;
-    padding-left:1rem ;
-}
-
-.footer img {
-    width: 8rem;
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.75rem;
-}
-
-
-.footer p {
-    margin: 0;
-}
-
-.footer ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.footer li + li {
-    margin-top: 0.4rem;
-}
-
-.footer a {
-    color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-}
-
-.footer a:hover {
-    color: #FFC4ED;
-}
-
-/* Giver plads mellem mailfelt, label og knap. */
-.footer form {
-    display: grid;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    max-width: 32rem;
-}
-
-.footer input,
-.footer button {
-    font: inherit;
-    padding: 0.65rem 0.85rem;
-    border-radius: 0.35rem;
-}
-
-.footer input {
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-    border: 1px solid #fff;
-}
-
-.footer button {
-    justify-self: start;
-    border: 0;
-    background-color: #FFC4ED;
-    color: #185735;
-    font-weight: 600;
-}
-
-
-.footer button a {
-    justify-self: start;
-    border: 0;
-    background-color: #FFC4ED;
-    color: #185735;
-    font-weight: 600;
-}
-
-.footer button :hover {
-    justify-self: start;
-    border: 0;
-    background-color: #EE5E03;
-    color: #185735;
-    font-weight: 600;
-}
-
-
-/* Knappen vises afdæmpet, mens tilmeldingen er deaktiveret.*/
-.footer button:enabled {
-    background-color: #bd3b97;
-    color:#185735;
-}
-
-
-/* Synlig fokusmarkering ved brug af Tab. */
-.footer :is(a, input, button):focus-visible {
-    outline: 2px solid #fff;
-    outline-offset: 3px;
-}
-
-.footer > a {
-    justify-self: start;
-}
-
-#sporgeskema {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    align-items: center;
-    width: 100%;
-    margin-inline: auto;
-    margin-top: 1.5rem;
-    padding: clamp(1rem, 3vw, 1.5rem);
-    border-radius: 0.75rem;
-    background-color:#ee5e03;
-    color: #fff;
-
-}
-#sporgeskema img{
-    /*display: block;*/
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.75rem;
-}
 
 .button2 {
     font: inherit;
@@ -1124,13 +1002,6 @@ a.sporgeskema-link img {
    
 }
 
- #sporgeskema h2 {
-    font-size: 1.75rem;
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
-    background-color: transparent;
-}
-
 .youtube-video {
     display: block;
     width: 100%;
@@ -1155,44 +1026,19 @@ a.sporgeskema-link img {
 
 }
 
-@media (min-width: 48rem) {
-    .footer {
-        justify-self: start;
-    }
 
-    .footer > a {
-        justify-self: end;
-    }
-    .footer-links {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-        
+/* =========================================
+   MOBIL – skærme under 48rem (768px)
+   ========================================= */
 
-    #sporgeskema {
-        grid-template-columns: 1fr 1fr;
+@media (width < 48rem) {
 
-    }
-
-    .nyhedsbrev-intro {
-        display: grid;
-        grid-template-columns: 8rem 1fr;
-        gap: 3rem;
-        align-items: center;
-    }
-
-}
-
-
-
-@media (width < 48rem) {  /* Nyhedsbrevet vises i én kolonne på mobil, nårt smallere end 768 pixels */ 
+    /* Nyhedsbrev vises i én kolonne */
     #nyhedsbrev {
-        grid-template-columns: minmax(0, 1fr); 	
-        /*Definerer én kolonne. 0 gør, at kolonnen må krympe, når pladsen er trang. 
-        1fr betyder, at den ene kolonne får hele den tilgængelige bredde i gridet.*/
+        grid-template-columns: minmax(0, 1fr);
         gap: 1rem;
         margin-block: 2rem;
     }
-
 
     #nyhedsbrev img {
         width: 8rem;
@@ -1205,61 +1051,92 @@ a.sporgeskema-link img {
         box-sizing: border-box;
     }
 
+    /* Footer vises i én kolonne */
     .footer {
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 1rem;'
     }
 
-    .footer-links {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1.5rem;
-        padding-left: 0;
+
+    .footer-links{
+        display: grid;
+        width: 100%;
+        max-width: 55rem; /* Før stod der 70rem */
+        margin-inline: auto;
+        gap: 2rem;
     }
-}
 
+    /* Mobilmenu */
+    /* JavaScript fjerner hidden, når knappen er klar */
 
-/*hvis skærm er smallere end 768px */
-
-@media (width < 48rem) {
-    /* JavaScript fjerner hidden, når knappen er klar til brug. */
     .menu-knap:not([hidden]) {
         display: inline-block;
     }
 
-    /* + vælger ul lige efter knappen. Listen skjules, når menuen er lukket. */
+    /* Skjuler menulinks, når menuen er lukket */
     .menu-knap:not([hidden])[aria-expanded="false"] + ul {
         display: none;
     }
 
     .hovedmenu ul {
-        margin-top: 0.5rem;          /* Luft mellem Menu-knappen og listen. */
-        justify-content: flex-start; /* Samler linksene til venstre. */
-        gap: 0.75rem;               /* Afstand mellem Forside og Gaveidéer. */
+        margin-top: 0.5rem;
+        justify-content: flex-start;
+        gap: 0.75rem;
     }
+
+    /* Mindre logo på mobil */
     .logo {
         width: 15rem;
     }
 }
 
-/*På brede skærme*/
 
-/* Fra 48rem (768 pixel) vises indholdet i flere kolonner. */
+/* =========================================
+   COMPUTER – skærme fra 48rem (768px)
+   ========================================= */
+
 @media (min-width: 48rem) {
+
+    /* Footer */
+    .footer {
+        justify-self: start;
+    }
+
+    .footer > a {
+        justify-self: end;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    
+}
+
+
+    /* Nyhedsbrev */
+    .nyhedsbrev-intro {
+        display: grid;
+        grid-template-columns: 8rem 1fr;
+        gap: 3rem;
+    }
+
+    /* Forside med hovedindhold og sidepanel */
     .forside-grid {
-    /* Bred kolonne til indlægget og smal kolonne til sidepanelet. */
-    grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
     }
 
+    /* Potpourri og bodyscrub */
     .indlaeg-grid {
-    /* To lige brede kolonner til potpourri og bodyscrub. */
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-      /* Tre lige brede kolonner på brede skærme. */
+    /* Tre gavekort ved siden af hinanden */
     #gaveideer .gaveideer-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
+    /* Videoer i to kolonner */
     .video-grid {
-    grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
+
