@@ -343,7 +343,7 @@ margin-bottom: 2rem;
     color:#ffffff;
     align-self: start; /* Boksen bliver ikke strakt til artiklens højde. */
     background-color: #bd3b97;
-    padding: 1.25rem;
+    padding: 2.5rem;
     border-radius: 0.5rem;
     font-weight: 45;
     line-height: 1.8rem;
@@ -355,7 +355,7 @@ h1.velkommen {
 }
 
 .overskrift{
-margin-bottom: 1rem;
+ margin-bottom: 1rem;
 
 }
 
@@ -368,7 +368,7 @@ margin-bottom: 1rem;
 }
 
 .velkommen img.portraet {
-    width: 250px;       /* Gør portrættet større. */
+    width: 100%;       /* Gør portrættet større. */
     max-width: 100%;    /* Holder billedet inden for sidepanelet. */
     height: auto;
     border-radius: 50%;
@@ -401,12 +401,17 @@ margin-bottom: 1rem;
 
 
 .sociale-ikoner {
-    display: flex;
+    display: grid;
+    grid-template-columns: 10rem 1fr 1fr 1fr 1fr 1fr;
     flex-wrap: wrap;
     gap: 0.5rem;
     background-color: #CBE3E7;
     border-radius: 0.5rem;
     padding: 0.5rem 0.75rem;
+}
+
+.some h3 {
+    margin: 1rem;
 }
 
 .sociale-ikoner a {

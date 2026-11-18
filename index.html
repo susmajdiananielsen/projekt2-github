@@ -20,7 +20,7 @@
 <div class="topraekke">
     <div class="logo-omraade">
         <a class="logo" href="index.html">
-            <img src="img/Logo-transparent-bg.png" alt="Grønne Gaver logo"></a>
+            <img src="img/logo-transparent-bg.png" alt="Grønne Gaver logo"></a>
     </div>
 
 
@@ -55,7 +55,7 @@
                  <ul id="hovedmenu-links">
                     <li><a href="index.html" aria-current="page">Forside</a></li>
                     <li><a href="konceptet.html">Konceptet</a></li>
-                    <li><a href="guider.html">Guider</a></li> 
+                    <li><a href="guider.html">DIY Guider</a></li> 
                     <li><a href="video.html">Videoer</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
@@ -83,7 +83,7 @@
         <!-- Sidepanelet er et direkte child af .forside-grid. -->
         <aside class="sidepanel">
             <section class="velkommen">
-                <a href="konceptet.html"></a><img class="portraet" src="img/sus-profilbillede-close-up.png" alt="Profilbillede af Sus-Maj"></a>
+                <a href="konceptet.html"><img class="portraet" src="img/sus-profilbillede-close-up.png" alt="Profilbillede af Sus-Maj"></a>
 
                 <h2>Velkommen hos mig</h2>
                 <p>Jeg hedder Sus-Maj. Her deler jeg idéer til hjemmelavede
@@ -106,9 +106,9 @@
             </nav>
 
             <section class="some">
-               <div><h3>Følg med her</h3></p></div>
+               
                 <div class="sociale-ikoner">
-                   
+                   <div><h3>Følg med her</h3></div>
                     <a href="#nyhedsbrev" aria-label="Tilmeld dig nyhedsbrevet"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
 
                     <a aria-label="Følg Grønne Gaver på Facebook">
@@ -155,7 +155,7 @@
     <div class="gaveideer-grid">
         <article>
             <a href="krydderurtesalt.html"><img src="img/krydderurtesalt.png"
-                 alt="Glas med krydderurtesalt pyntet med snor og et gavemærke"></a>
+                 alt="Glas med krydderurtesalt pyntet med snor og et gavemærke" loading="lazy"></a>
             <h3>Krydderurtesalt</h3>
             <p>Lav krydderurtesalt med urter fra haven eller altanen. Fyld det på et lille genbrugsglas, og sæt et kort på med forslag til, hvad saltet passer til.</p>
             <a class="gavekort-link" href="krydderurtesalt.html" aria-label="Læs guiden til krydderurtesalt">
@@ -166,7 +166,7 @@
 
         <article>
                 <a href="appelsin-vanilje-likor.html"><img src="img/appelsin-vanilje-likor-jul.png"
-                    alt="Et glas appelsinlikør med appelsiner og vanilje ved siden af"></a>
+                    alt="Et glas appelsinlikør med appelsiner og vanilje ved siden af" loading="lazy"></a>
                 <h3>Appelsinlikør</h3>
                 <p>Lav en appelsinlikør med appelsinskal, vanilje og vodka fra barskabet. Hæld den på en genbrugsflaske, og bind et bånd om halsen.</p>
                 <a class="gavekort-link" href="appelsin-vanilje-likor.html" aria-label="Læs guiden til appelsinlikør med vanilje">
@@ -177,7 +177,7 @@
 
         <article>
             <a href="fro-fra-haven.html"><img src="img/blomsterfro-gavepapir.png"
-                 alt="Foldede frøkuverter af brugt papir med små blomster på"></a>
+                 alt="Foldede frøkuverter af brugt papir med små blomster på" loading="lazy"></a>
             <h3>Frø fra haven</h3>
            <p>Fold små frøkuverter af brugt papir, og fyld dem med frø fra dine yndlingsblomster. Skriv blomstens navn og et lille såtip på hver kuvert.</p>
             <a class="gavekort-link" href="fro-fra-haven.html" aria-label="Læs guiden til frø fra haven">Læs guiden <span aria-hidden="true">→</span>
@@ -190,12 +190,13 @@
 
 
 <section class="nyhedsbrev" id="nyhedsbrev" aria-labelledby="nyhedsbrev-titel">
-        <div class="nyhedsbrev-intro"><img class="nyhedsbrev-portraet" src="img/sus-profilbillede-close-up.png" alt="Portræt af Sus-Maj" loading="lazy">
+        <div class="nyhedsbrev-intro"><img class="nyhedsbrev-portraet" src="img/sus-profilbillede-close-up.png" alt="Portræt af Sus-Maj" loading="lazy"> 
+            <!--Lazy = vente med at indlæse billedet, til brugeren nærmer sig det ved at scrolle.-->
                 <div>
                     <h2 id="nyhedsbrev-titel">Få nye idéer i din indbakke</h2>
                     <p>Jeg deler nye gaveidéer og små genbrugstips til dine egne projekter.</p>
                 </div>
-            </div>
+        </div>
             <form method="post">
                 <label for="nyhedsbrev-fornavn">Fornavn (valgfrit)</label>
                 <input type="text" id="nyhedsbrev-fornavn" name="first_name"
@@ -207,22 +208,21 @@
 
                 <button type="submit" class="tilmelding">Tilmeld mig</button>
             </form>
-        </div>
+
+
+
+
     </section>
     </main>
 <!-- Footer links -->
 
   <footer class="footer">
     <nav class="footer-links" aria-label="Links i footeren">
-        <div>
-            <h2>Nyeste blogindlæg</h2>
-            <ul>
-                <li><a href="#">Efterårsroser af blade</a></li>
-                <li><a href="index.html#gaveideer">Gaveidéer</a></li>
-                <li><a href="#">Genbrugstips</a></li>
-                <li><a href="#">Top 5 idéer til jul</a></li>
-            </ul>
-        </div>
+          
+        <div class="logo-omraade">
+        <a class="logo" href="index.html">
+        <img src="img/logo-transparent-bg.png" alt="Grønne Gaver logo"></a>
+    </div>
 
         <div>
             <h2>Følg mig</h2>
