@@ -14,10 +14,12 @@ body {
 h1, h2, h3 {
     font-family: "DynaPuff", sans-serif;
     font-weight: 600;
+  }  
+
+h1{
+color:#bd3b97;
+
 }
-
-
-
 .img-container {
   position: relative;
   width: 50%;
@@ -511,8 +513,8 @@ h2.overskrift-forside {
     /* Lader linket fylde omkring teksten og få luft på alle sider. */
     display: inline-block;
     padding: 0.65rem 1.1rem; /* 2 værdier = Top og bund */
-    margin-bottom: 4rem;
     border-radius: 0.35rem;
+    margin-bottom: 3rem;;
     background-color: #bd3b97;
     color: white;
     font-weight: bold;
@@ -551,7 +553,7 @@ p + .guide-link {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    margin-top: 1rem;
+    
 }
 
 
@@ -738,7 +740,7 @@ p + .guide-link {
 }
 
 .footer h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.2;
     margin-bottom: 0.75rem;
 }
@@ -805,10 +807,12 @@ p + .guide-link {
     grid-template-columns: 1fr 1fr 1fr; 
     align-self: flex-start;
     margin-top: auto;
+    margin-bottom:2rem;
     padding-block: 0.5rem;
     color: #BD3B97;
     text-decoration: none;
     text-underline-offset: 0.15em;
+    display: inline-block;
 }
 .gavekort-link:hover {
     color: #185735;
@@ -874,7 +878,7 @@ p + .guide-link {
     width: 100%;
     max-width: 100%;
     margin-inline: auto;
-    margin-top: 7rem;
+    margin-top: 3rem;
     margin-bottom: 4rem;
     padding: clamp(1rem, 3vw, 1.5rem);
     border-radius: 0.75rem;
