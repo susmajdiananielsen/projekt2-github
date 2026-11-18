@@ -15,23 +15,23 @@
     <header class="sidehoved" id="top">
    
 <!-- Kun logo og søgefelt ligger i denne Flexbox-række. -->
-<div class="topraekke">
-    <div class="logo-omraade">
-        <a class="logo" href="index.html">
-            <img src="img/Logo-transparent-bg.png" alt="Grønne Gaver logo"></a>
+    <div class="topraekke">
+            <div class="logo-omraade">
+                <a class="logo" href="index.html">
+                    <img src="img/Logo-transparent-bg.png" alt="Grønne Gaver logo"></a>
+            </div>
+
+            <!-- Label beskriver feltet. For og id skal være ens. -->
+            <form class="soegning" role="search">
+                <label for="soegeord">Søg efter gaveidéer</label>
+                <div class="soegefelt">
+                    <input type="search" required id="soegeord" name="q"
+                        placeholder="Indtast søgeord">
+                    <button class="soeg" type="submit">Søg</button>
+                </div>
+            </form>
     </div>
 
-    <form class="soegning" role="search">
-        <!-- Label beskriver feltet. For og id skal være ens. -->
-        <label for="soegeord">Søg efter gaveidéer</label>
-
-        <div class="soegefelt">
-            <input type="search" id="soegeord" name="q"
-                   placeholder="Indtast søgeord">
-            <button type="submit" disabled>Søg</button>
-        </div>
-    </form>
-</div>
 
     <!-- Topmenu start -->
     <nav class="hovedmenu" aria-label="Hovedmenu">
@@ -58,8 +58,8 @@
         </ul>
     </nav>
 </header>
+
  <main id="hovedindhold" tabindex="-1">
-  
          <!-- Viser, hvor læseren er, og linker tilbage til forsiden og gaveidéerne. -->
             <nav class="broedkrumme" aria-label="Brødkrummesti">
                 <a href="index.html">Forside</a>

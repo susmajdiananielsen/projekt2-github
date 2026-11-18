@@ -13,7 +13,8 @@
 <body>
     <a class="spring-link" href="#hovedindhold">Spring til indhold</a>
     <header class="sidehoved" id="top">
-    <!-- Kun logo og søgefelt ligger i denne Flexbox-række. -->
+    
+        <!-- Kun logo og søgefelt ligger i denne Flexbox-række. -->
 <div class="topraekke">
     <div class="logo-omraade">
         <a class="logo" href="index.html">
@@ -22,15 +23,17 @@
 
 
  <!-- Label beskriver feltet. For og id skal være ens. -->
+    <!-- Label beskriver feltet. For og id skal være ens. -->
     <form class="soegning" role="search">
         <label for="soegeord">Søg efter gaveidéer</label>
         <div class="soegefelt">
-            <input type="search" id="soegeord" name="q"
+            <input type="search" required id="soegeord" name="q"
                    placeholder="Indtast søgeord">
-            <button type="submit" disabled>Søg</button>
+            <button class="soeg" type="submit">Søg</button>
         </div>
     </form>
 </div>
+
 
 <!-- Topmenu start -->
 <nav class="hovedmenu" aria-label="Hovedmenu">
@@ -62,11 +65,12 @@
                 <p>Idéer til personlige gaver med planter, naturmaterialer
                     og ting, du allerede har.</p>
 
+
         <!-- Parent til de to kolonner på forsiden. -->
         <div class="forside-grid">
             <!-- Første child: Det fremhævede indlæg. -->
             <article>
-                <a href="badesalt-rosenblade.html"><img class="forsidebillede"src="img/rosenbadesalt.png" alt="Et glas med badesalt og tørrede rosenblade"></a>
+                <a href="badesalt-rosenblade.html"><img class="forsidebillede" src="img/rosenbadesalt.png" alt="Et glas med badesalt og tørrede rosenblade"></a>
                 <h2>Badesalt med rosenblade</h2>
                 <p>Med groft salt, tørrede rosenblade og et genbrugsglas kan du lave en lille gave til et varmt fodbad. Du kan sætte dit eget præg på indpakningen med ting fra gemmerne. Brug for eksempel en stofrest over låget, et bånd fra en tidligere gave eller lidt snor.
                 <br><br>
@@ -77,12 +81,12 @@
         <!-- Sidepanelet er et direkte child af .forside-grid. -->
         <aside class="sidepanel">
             <section class="velkommen">
-                <img class="portraet" src="img/sus-profilbillede-close-up.png" alt="Profilbillede af Sus-Maj">
+                <a href="konceptet.html"></a><img class="portraet" src="img/sus-profilbillede-close-up.png" alt="Profilbillede af Sus-Maj"></a>
 
                 <h2>Velkommen hos mig</h2>
                 <p>Jeg hedder Sus-Maj. Her deler jeg idéer til hjemmelavede
                     gaver med ting, du allerede har det meste af i hjemmet. Giv personlige gaver som folk vil sætte stor pris.</p>
-                    <span class="link-tekst"><a href="konceptet.html">Læs om konceptet →</a></span>
+                    <span class="link-tekst"><a href="konceptet.html">Læs om konceptet</a></span>
                 <!--<span aria-hidden="true">→</span>-->
                 
         </section>
@@ -91,10 +95,10 @@
             <nav class="inspiration" aria-labelledby="inspiration-titel">
                 <h2 id="inspiration-titel">Find inspiration</h2>
                 <ul class="inspirationsliste">
-                    <li><a href="krydderurtesalt.html"><i class="fa-solid fa-seedling inspirationsikon" aria-hidden="true"></i> Krydderurter</a></li>
-                    <li><a href="krydderurtesalt.html"><i class="fa-solid fa-utensils inspirationsikon" aria-hidden="true"></i> Gaver fra køkkenet</a></li>
-                    <li><a href="krydderurtesalt.html"><i class="fa-solid fa-spa inspirationsikon" aria-hidden="true"></i> Blomster og frø</a></li>
-                    <li><a href="fro-fra-haven.html"><i class="fa-solid fa-gift inspirationsikon" aria-hidden="true"></i> Genbrug og indpakning</a></li>
+                    <li><a href="krydderurtesalt.html"><i class="fa-solid fa-seedling inspirationsikon" aria-hidden="true"></i>Krydderurter</a></li>
+                    <li><a href="krydderurtesalt.html"><i class="fa-solid fa-utensils inspirationsikon" aria-hidden="true"></i>Gaver fra køkkenet</a></li>
+                    <li><a href="krydderurtesalt.html"><i class="fa-solid fa-spa inspirationsikon" aria-hidden="true"></i>Blomster og frø</a></li>
+                    <li><a href="fro-fra-haven.html"><i class="fa-solid fa-gift inspirationsikon" aria-hidden="true"></i>Genbrug og indpakning</a></li>
                     
                 </ul>
             </nav>
@@ -105,15 +109,15 @@
                    
                     <a href="#nyhedsbrev" aria-label="Tilmeld dig nyhedsbrevet"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
 
-                    <a href="https://www.facebook.com/DIT_BRUGERNAVN" aria-label="Følg Grønne Gaver på Facebook">
+                    <a aria-label="Følg Grønne Gaver på Facebook">
                         <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                     </a>
 
-                    <a href="https://www.instagram.com/DIT_BRUGERNAVN/" aria-label="Følg Grønne Gaver på Instagram">
+                    <a aria-label="Følg Grønne Gaver på Instagram">
                         <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </a>
 
-                    <a href="https://www.pinterest.com/DIT_BRUGERNAVN/" aria-label="Følg Grønne Gaver på Pinterest">
+                    <a aria-label="Følg Grønne Gaver på Pinterest">
                         <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
                     </a>
                 </div>

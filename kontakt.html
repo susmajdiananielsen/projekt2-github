@@ -23,15 +23,17 @@
                 </a>
             </div>
 
+                <!-- Label beskriver feltet. For og id skal være ens. -->
             <form class="soegning" role="search">
                 <label for="soegeord">Søg efter gaveidéer</label>
                 <div class="soegefelt">
-                    <input type="search" id="soegeord" name="q"
-                           placeholder="Indtast søgeord">
-                    <button type="submit" disabled>Søg</button>
+                    <input type="search" required id="soegeord" name="q"
+                        placeholder="Indtast søgeord">
+                    <button class="soeg" type="submit">Søg</button>
                 </div>
             </form>
-        </div>
+     </div>
+       
 
         <nav class="hovedmenu" aria-label="Hovedmenu">
             <button type="button" class="menu-knap"
@@ -58,13 +60,13 @@
 
    <main id="hovedindhold" tabindex="-1">
 
-    <h2>Kontakt mig</h2>
-                <p class="afstand">Her kan du kontakte mig, hvis du har spørgsmål. Vælg blot et emne i formularen og skriv din besked i beskedfeltet og tryk send. Jeg vender som reghl tilbage indenfor 2-3 hverdage.</p>
-
     <!-- Kontaktformularens beholder -->
     <div class="kontaktform">
-        <h1>Kontakt os</h1>
-            <p class="kontakt-tekst">Skriv til os via kontaktformularen og så vender vi tilbage til dig</p>
+        <h1>Skriv til mig</h1>
+            <p class="kontakt-tekst"><p>Har du spørgsmål til en gaveidé eller et forslag til Grønne Gaver? Send mig en besked – jeg glæder mig til at høre fra dig.
+
+Jeg glæder mig til at høre fra dig!</p>
+</p>
                 <form action="">
                     <label for="navn">Navn</label>
                     <input id="navn" type="text" required>
@@ -127,6 +129,7 @@
                 
                 <button type="submit" name="submit">Send</button>
         </form> 
+        <p><br>Jeg svarer som regel inden for 2–3 hverdage.</p>
     </div>
 </main>
     <footer class="footer">

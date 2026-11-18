@@ -16,17 +16,55 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
+
+
+.img-container {
+  position: relative;
+  width: 50%;
+}
+
+.img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.img-middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.img-container:hover .image {
+  opacity: 0.3;
+}
+
+.img-container:hover .img-middle {
+  opacity: 1;
+}
+
+.text{
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
 .sidehoved {
     max-width: 70rem;
     margin: 0 auto; /* Centrerer sidens top på en bred skærm. */
     padding: 1rem;
 }
 
-.logo {
-    color: #185735;
-    font-size: 2rem;
-    font-weight: bold;
-}
 
 ul.liste-punkter li{
 margin:1rem;
@@ -169,6 +207,7 @@ list-style-type:disc;
     flex: 1; /* Feltet tager den plads, knappen ikke bruger. */
     min-width: 0; /* Lader feltet krympe, hvis pladsen er trang. */
     padding: 0.5rem;
+    margin-left:1rem ;
     font: inherit;
     border-radius: 0.5rem 0rem 0.0rem 0.5rem;
     border: 1px solid #BD3B97;
@@ -180,10 +219,23 @@ list-style-type:disc;
     background-color: #BD3B97;
     color: #fff;
     border-radius: 0rem 0.5rem 0.5rem 0rem;
-    
 }
 
 
+.soeg a {
+
+    background-color: #FFC4ED;
+    color:#BD3B97 ;
+    border: 1px solid #BD3B97;
+   
+}
+.soeg:hover {
+
+    background-color: #FFC4ED;
+    color:#BD3B97 ;
+    border: 1px solid #BD3B97;
+   
+}
 
 .logo {
     /* Linket får en bredde og kan krympe på en smal skærm. */
@@ -327,6 +379,12 @@ margin-bottom: 1rem;
     padding-inline-start: 0;
 }
 
+.inspirationsliste a:hover{
+    list-style: none;
+    padding-inline-start: 0;
+    color: #bd3b97;
+}
+
 .some a {
     display: flex;
     flex-direction: column; /* Placér de tre children under hinanden. */
@@ -359,6 +417,17 @@ margin-bottom: 1rem;
     color: inherit;
     font-size: 1.25rem;
     text-decoration: none;
+}
+
+.sociale-ikoner a:hover {
+    display: inline-grid;
+    place-items: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    color: inherit;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #BD3B97;
 }
 
 
@@ -663,6 +732,13 @@ p + .guide-link {
     text-decoration: underline;
     text-underline-offset: 0.15em; /* Giver lidt luft under teksten. */
     color: #fff;
+    
+}
+
+.link-tekst a:hover{
+    text-decoration: underline;
+    text-underline-offset: 0.15em; /* Giver lidt luft under teksten. */
+    color: #FFC4ED;
     
 }
 

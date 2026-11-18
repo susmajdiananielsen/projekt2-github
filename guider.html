@@ -22,12 +22,13 @@
 
 
  <!-- Label beskriver feltet. For og id skal være ens. -->
+   <!-- Label beskriver feltet. For og id skal være ens. -->
     <form class="soegning" role="search">
         <label for="soegeord">Søg efter gaveidéer</label>
         <div class="soegefelt">
-            <input type="search" id="soegeord" name="q"
+            <input type="search" required id="soegeord" name="q"
                    placeholder="Indtast søgeord">
-            <button type="submit" disabled>Søg</button>
+            <button class="soeg" type="submit">Søg</button>
         </div>
     </form>
 </div>
