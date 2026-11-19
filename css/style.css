@@ -122,6 +122,7 @@ list-style-type:disc;
 .hovedmenu a:focus-visible {
     outline: 3px solid #fff;
     outline-offset: -5px; /* Trækker fokuskanten ind på linket. */
+    border-radius: 25px;
 }
 
 
@@ -144,6 +145,7 @@ list-style-type:disc;
     background-color: #bd3b97;
     color: #fff;
 }
+
 
 .menu-knap:focus-visible {
     outline: 2px solid #185735;
@@ -772,6 +774,7 @@ p + .guide-link {
     color: #185735;
     outline: 3px solid #185735;
     outline-offset: -4px;
+    border-radius: 25px;
 }
 
 #gaveideer > h2 {
