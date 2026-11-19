@@ -1060,23 +1060,23 @@ a.sporgeskema-link img {
         padding: 1.5rem 1rem;
     }
 
-    
     .footer-links {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 0.70rem;
+        column-gap: 0.75rem;
         row-gap: 1rem;
     }
 
     .footer-links ul {
-        padding-left: 1.15rem;
+        padding-left: 1.20rem;
     }
 
     .footer-links li {
-        margin-block: 0.15rem;
+        margin-block: 0.20rem;
     }
 
-    .skjul-mobil {
-        display: none;
+
+     .footer-links .skjul-mobil {
+        display: none !important;
     }
 }
 
