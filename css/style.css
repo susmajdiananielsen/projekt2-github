@@ -18,8 +18,24 @@ h1, h2, h3 {
 
 h1{
 color:#bd3b97;
-
 }
+
+
+/* Overskriften inde i forsidens artikel */
+.forside-grid article h2 {
+    font-size: 1.5rem;
+}
+
+.forside-grid > article {
+    display: flex;
+    flex-direction: column;
+}
+
+.forside-grid > article > a:last-child {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
 .img-container {
   position: relative;
   width: 50%;
@@ -419,8 +435,9 @@ h1.velkommen {
 }
 
 .blog-dato {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 200;
+    font-style: italic;
     color: #bd3b97;
     margin-bottom: 0.5rem;
 }
@@ -712,7 +729,7 @@ p + .guide-link {
 
 .footer {
     margin-top: 2rem;        /* Luft mellem gaveidéerne og sidefoden. */
-    padding: 1.25rem 1rem;   /* Luft omkring teksten inde i sidefoden. */
+    padding: 1.25rem 1rem 1.25rem 7rem;  /* Luft omkring teksten inde i sidefoden. */
     background-color: #185735;
     color: #fff;
     width: 100%;
@@ -725,6 +742,9 @@ p + .guide-link {
     text-decoration: underline;
 }
 
+footer a i {
+    margin-right: 0.5rem;
+}
 
 .footer-links {
     display: grid;
@@ -739,6 +759,7 @@ p + .guide-link {
 .footer-bund {
     text-align: center;
     margin-top: 4rem;
+    font-style: italic;
 }
 
 .footer h2 {
