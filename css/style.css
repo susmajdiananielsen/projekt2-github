@@ -1061,6 +1061,16 @@ a.sporgeskema-link img {
 
 @media (width < 48rem) {
 
+    /* DIY-guide: Vis billedet først på mobil */
+    #guide {
+    display: flex;
+    flex-direction: column;
+}
+
+    #guide .guide-billede {
+    order: -1;
+}
+
     /* Nyhedsbrev vises i én kolonne */
     #nyhedsbrev {
         grid-template-columns: minmax(0, 1fr);
