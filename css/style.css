@@ -1078,7 +1078,7 @@ a.sporgeskema-link img {
      .footer-links .skjul-mobil {
         display: none !important;
     }
-}
+
 
     /* Mobilmenu */
     /* JavaScript fjerner hidden, når knappen er klar */
@@ -1102,7 +1102,7 @@ a.sporgeskema-link img {
     .logo {
         width: 15rem;
     }
-}
+ }
 
 
 /* =========================================
