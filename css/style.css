@@ -99,8 +99,8 @@ list-style-type:disc;
     border-radius: 0.75rem; /* Afrunder alle fire hjørner på menubjælken. */
    
 
-    /* Linkene kan hoppe ned på næste linje, hvis pladsen bliver trang. */
-    flex-wrap: wrap;
+    /* Linkene kan IKKE hoppe ned på næste linje, selvom pladsen bliver trang. */
+    flex-wrap: nowrap;
 
     /* Fordeler den ledige plads mellem linkene. */
     /*justify-content: space-between;*/
