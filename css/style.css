@@ -727,12 +727,12 @@ p + .guide-link {
 .footer-links {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     width: 100%;
     max-width: 70rem;
     margin-inline: auto;
-
 }
+
 
 .footer-bund {
     text-align: center;
@@ -1057,17 +1057,28 @@ a.sporgeskema-link img {
 
     /* Footer vises i én kolonne */
     .footer {
-        padding: 1.5rem 1rem;'
+        padding: 1.5rem 1rem;
     }
 
-
-    .footer-links{
-        display: grid;
-        width: 100%;
-        max-width: 55rem; /* Før stod der 70rem */
-        margin-inline: auto;
-        gap: 2rem;
+    
+    .footer-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 0.70rem;
+        row-gap: 1rem;
     }
+
+    .footer-links ul {
+        padding-left: 1.15rem;
+    }
+
+    .footer-links li {
+        margin-block: 0.15rem;
+    }
+
+    .skjul-mobil {
+        display: none;
+    }
+}
 
     /* Mobilmenu */
     /* JavaScript fjerner hidden, når knappen er klar */
